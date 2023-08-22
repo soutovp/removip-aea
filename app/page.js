@@ -1,3 +1,4 @@
+import { container } from "./main.css.ts"
 export default function Page() {
-	return <h1>Hello, Next.js!</h1>
+	return <h1 className={container}>Hello, AEA.., Next.js!</h1>
 }

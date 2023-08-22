@@ -7,6 +7,7 @@
 	"author": "AEA",
 	"license": "MIT",
 	"dependencies": {
+		"@vanilla-extract/css": "^1.13.0",
 		"next": "^13.4.19",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
@@ -16,5 +17,10 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint"
+	},
+	"devDependencies": {
+		"@types/react": "18.2.20",
+		"@vanilla-extract/next-plugin": "^2.3.0",
+		"typescript": "^5.1.6"
 	}
 }
