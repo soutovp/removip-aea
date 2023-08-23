@@ -14,19 +14,19 @@ export default function Header() {
 				<div>
 					<ul className='headerMenu'>
 						<li>
-							<a className="headerActiveLink" href="#">Home</a>
+							<a className="headerActiveLink" href="/">Home</a>
 						</li>
 						<li>
-							<a href="#">Sobre</a>
+							<a href="sobre">Sobre</a>
 						</li>
 						<li>
-							<a href="#">Serviços</a>
+							<a href="servicos">Serviços</a>
 						</li>
 						<li>
-							<a href="#">Blog</a>
+							<a href="blog">Blog</a>
 						</li>
 						<li>
-							<a href="#">Contato</a>
+							<a href="contato">Contato</a>
 						</li>
 					</ul>
 				</div>
