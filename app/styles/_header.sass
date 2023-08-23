@@ -1,6 +1,7 @@
 
 header
 	display: block
+	border-bottom: 1px solid $secondary
 	nav.headerNav
 		display: flex
 		margin: auto
@@ -17,6 +18,8 @@ header
 		a
 			font-family: 'Quicksand'
 			color: $secondary
+			@include media-small
+				color: black
 			text-decoration: none
 			&:hover
 				font-weight: bold

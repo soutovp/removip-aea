@@ -32,6 +32,7 @@
 }
 header {
   display: block;
+  border-bottom: 1px solid #EBEAEA;
 }
 header nav.headerNav {
   display: flex;
@@ -53,6 +54,11 @@ header ul.headerMenu a {
   color: #EBEAEA;
   text-decoration: none;
 }
+@media (max-width: 768px) {
+  header ul.headerMenu a {
+    color: black;
+  }
+}
 header ul.headerMenu a:hover {
   font-weight: bold;
 }
@@ -67,5 +73,8 @@ header ul.headerRedes {
 }
 
 body {
+  margin: 0;
   background-color: #791B28;
+  color: #EBEAEA;
+  text-align: center;
 }

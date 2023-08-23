@@ -2,7 +2,26 @@
 $primary: #791B28
 $secondary: #EBEAEA
 $tertiary: #1e1814
+$breakpoint-small: 768px
+$breakpoint-medium: 992px
+$breakpoint-large: 1200px
+@mixin media-small
+	@media (max-width: $breakpoint-small)
+		@content
+@mixin media-medium
+	@media (min-width: $breakpoint-small + 1) and (max-width: $breakpoint-medium)
+		@content
+@mixin media-large
+	@media (min-width: $breakpoint-medium + 1) and (max-width: $breakpoint-large)
+		@content
+@mixin media-xlarge
+	@media (min-width: $breakpoint-large + 1)
+		@content
 
 @import header
+
 body
+	margin: 0
 	background-color: $primary
+	color: $secondary
+	text-align: center

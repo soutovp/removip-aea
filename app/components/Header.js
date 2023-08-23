@@ -2,7 +2,7 @@ import Image from "next/image"
 export default function Header() {
 	return (
 		<header>
-			<nav class="headerNav widthLimitation">
+			<nav className="headerNav widthLimitation">
 				<div>
 					<Image
 						src={'/svg/removip-logo-header.svg'}
@@ -12,9 +12,9 @@ export default function Header() {
 					/>
 				</div>
 				<div>
-					<ul class='headerMenu'>
+					<ul className='headerMenu'>
 						<li>
-							<a class="headerActiveLink" href="#">Home</a>
+							<a className="headerActiveLink" href="#">Home</a>
 						</li>
 						<li>
 							<a href="#">Sobre</a>
@@ -31,7 +31,7 @@ export default function Header() {
 					</ul>
 				</div>
 				<div>
-					<ul class="headerRedes">
+					<ul className="headerRedes">
 						<li>
 							<a href="https://www.instagram.com/removip_/" target="_blank" rel="noopener noreferrer">
 								<Image src={'/svg/instagram.svg'} width={32} height={32} alt="Link para o Instagram" />
