@@ -1,9 +1,4 @@
-import { styled } from "styled-components"
+import style from './styles/style.sass'
 export default function Page() {
-	return <H1> Hello from next</H1 >
+	return <h1 className={style.h1}> Hello sass <b>STRONG</b></h1 >
 }
-
-const H1 = styled.h1`
-	background-color: black;
-	color: white;
-`
