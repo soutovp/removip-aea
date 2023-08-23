@@ -18,7 +18,7 @@
 		"jsx": "preserve",
 		"plugins": [
 			{
-				"name": "next"
+				"name": "next",
 			}
 		]
 	},
@@ -27,7 +27,7 @@
 		".next/types/**/*.ts",
 		"**/*.ts",
 		"**/*.tsx",
-		"**/*.css.ts"
+		"app/layout.js"
 	],
 	"exclude": [
 		"node_modules"

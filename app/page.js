@@ -1,4 +1,9 @@
-import { container } from "./main.css"
+import { styled } from "styled-components"
 export default function Page() {
-	return <h1 className={container}> Hello from next</h1 >
+	return <H1> Hello from next</H1 >
 }
+
+const H1 = styled.h1`
+	background-color: black;
+	color: white;
+`
