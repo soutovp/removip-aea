@@ -1,4 +1,17 @@
 import style from './styles/style.sass'
+import Header from './components/Header'
+import Image from 'next/image'
 export default function Page() {
-	return <h1 className={style.h1}> Hello sass <b>STRONG</b></h1 >
+	return (<>
+		<Header />
+		<main>
+			<div class="bgAmbulancias">
+				<Image
+					src={'/images/bg-ambulancias.jpg'}
+					width={1000}
+					height={1000}
+				/>
+			</div>
+		</main>
+	</>)
 }
