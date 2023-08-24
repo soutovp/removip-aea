@@ -5,11 +5,11 @@
       "static/chunks/main-app.js",
       "static/chunks/app/layout.js"
     ],
-    "/page": [
+    "/contato/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/page.css",
-      "static/chunks/app/page.js"
+      "static/css/app/contato/page.css",
+      "static/chunks/app/contato/page.js"
     ]
   }
 }
