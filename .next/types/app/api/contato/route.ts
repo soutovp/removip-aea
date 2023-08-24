@@ -1,4 +1,4 @@
-// File: C:\projetos\Aea\removip-aea\app\api\contato\route.js
+// File: D:\PerfilSouto\Documents\ProjetosWeb\removip\app\api\contato\route.js
 import * as entry from '../../../../../app/api/contato/route.js'
 import type { NextRequest } from 'next/server.js'
 
