@@ -1,13 +1,32 @@
-
+button#hamburger
+	position: absolute
+	background: transparent
+	border: 1px solid $secondary
+	border-radius: 2px
+	padding: 5px
+	left: 5px
+	top: 5px
+	color: $secondary
+	z-index: 999
 header
 	display: block
 	border-bottom: 1px solid $secondary
+	@include media-small
+		transition: 1s
+		height: 100%
+		width: 100%
+		background-color: $secondary
+		position: absolute
+		transform: translateX(0)
 	nav.headerNav
 		display: flex
 		margin: auto
 		flex-direction: row
 		align-items: center
 		justify-content: space-around
+		@include media-small
+			flex-direction: column
+			height: 100%
 	ul.headerMenu
 		list-style: none
 		display: flex
@@ -15,16 +34,22 @@ header
 		gap: 15px
 		font-size: 16px
 		font-weight: 300
+		@include media-small
+			flex-direction: column
 		a
 			font-family: 'Quicksand'
 			color: $secondary
+			text-decoration: none
 			@include media-small
 				color: black
-			text-decoration: none
+				padding: 15px
+				// background-color: rgba(0,0,0,.3)
 			&:hover
 				font-weight: bold
 	.headerActiveLink
 		font-weight: 600
+		&:hover
+			font-weight: normal
 	ul.headerRedes
 		list-style: none
 		display: flex
