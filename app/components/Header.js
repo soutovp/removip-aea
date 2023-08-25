@@ -39,7 +39,7 @@ export default function Header() {
 					<path d="M20 17L4 17" stroke="#791B28" stroke-width="1.5" stroke-linecap="round" />
 				</svg>
 			</button>
-			<header id="menu" style={{ transform: openMenu ? 'translateX(0)' : 'translateX(-100%)' }}>
+			<header id="menu" style={{ transform: openMenu ? 'translateX(0)' : 'translateX(0)' }}>
 				<nav className="headerNav widthLimitation">
 					<div>
 						<Image
@@ -61,10 +61,10 @@ export default function Header() {
 								<Link href="servicos">Serviços</Link>
 							</li>
 							<li>
-								<Link href="blog">Blog</Link>
+								<Link href="#">Blog</Link>
 							</li>
 							<li>
-								<Link href="contto">Contato</Link>
+								<Link href="contato">Contato</Link>
 							</li>
 						</ul>
 					</div>

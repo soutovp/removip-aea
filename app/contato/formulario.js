@@ -1,8 +1,8 @@
-"use client";
-import { useForm } from "react-hook-form";
+"use client"
+import { NextResponse } from "next/server";
+import { useForm } from "react-hook-form"
 
 export default function Formulario() {
-
 	const {
 		handleSubmit,
 		register,
@@ -10,31 +10,31 @@ export default function Formulario() {
 	} = useForm({
 		mode: "onBlur",
 		reValidateMode: 'onBlur',
-		// defaultValues: {
-		// 	nome: "",
-		// 	telefone: "",
-		// 	email: "",
-		// 	assunto: "",
-		// 	mensagem: "",
-		// }
+		defaultValues: {
+			nome: "Marcelo",
+			telefone: "11999999999",
+			email: "a@a.com",
+			assunto: "assunto yup",
+			mensagem: "mensagem eba",
+		}
 	});
 
 	// const onSubmit = (data) => console.log('data');
+
 	const onSubmit = (data) => {
-		console.log(data)
+		//console.log(data)
 		fetch('/api/contato', {
 			method: 'POST',
 			headers: {
-				'Accept': 'application/json, text/plain, */*',
+				// 'Accept': 'application/json, text/plain, */*',
 				'Content-Type': 'application/json'
 			},
 			body: JSON.stringify(data) // Serializa o objeto data para JSON
 		})
-			.then((res) => {
+			.then(async (res) => {
 				console.log('Resposta recebida');
-				if (res.status === 200) {
-					console.log('Sucesso!');
-				}
+				const { message } = await res.json()
+				console.log(message)
 			})
 
 		// console.log(JSON.stringify(data))
