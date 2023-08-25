@@ -1,7 +1,7 @@
 import Atendimento from '../components/Atendimento'
 import Banner from '../components/Banner'
 import Aberto from '../components/Aberto'
-import Formulario from './formulario'
+import Formulario from '../components/Formulario'
 
 export default function Page() {
 	return (
