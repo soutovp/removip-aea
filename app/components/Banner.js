@@ -1,5 +1,4 @@
 import Image from "next/image"
-import teste from '../styles/_teste.sass'
 export default function Banner(props) {
 	let page = props.page
 	return (
