@@ -3,7 +3,7 @@ import Atendimento from '../components/Atendimento'
 import Aberto from '../components/Aberto'
 export function Souto({ children }) {
 	return (
-		<div>${children}</div>
+		<div>{children}</div>
 	)
 }
 export default function Home() {
