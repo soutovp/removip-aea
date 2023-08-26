@@ -1,8 +1,11 @@
 import Banner from '../components/Banner'
 import Atendimento from '../components/Atendimento'
 import Aberto from '../components/Aberto'
-import Souto from '../components/Souto'
-
+export function Souto({ children }) {
+	return (
+		<div>${children}</div>
+	)
+}
 export default function Home() {
 	return (
 		<main>

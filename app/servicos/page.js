@@ -1,45 +1,46 @@
 import Atendimento from '../components/Atendimento'
 import Banner from '../components/Banner'
 import Aberto from '../components/Aberto'
+import Souto from '../components/Souto'
 
 export default function Page() {
 	return (
 		<>
 			<Banner page={'servicos'} />
 			<Atendimento />
-			<souto>Conheça algumas de nossas soluções</souto>
-			<souto>
+			<Souto>Conheça algumas de nossas soluções</Souto>
+			<Souto>
 				{/* img */}
-				<souto>TRANSPORTE AEROMÉDICO</souto>
-				<souto>Sistema de transporte aéreo integrado com o terrestre.</souto>
-				<souto>Transferência intermunicipal, interestadual e internacioal.</souto>
-			</souto>
-			<souto>
+				<Souto>TRANSPORTE AEROMÉDICO</Souto>
+				<Souto>Sistema de transporte aéreo integrado com o terrestre.</Souto>
+				<Souto>Transferência intermunicipal, interestadual e internacioal.</Souto>
+			</Souto>
+			<Souto>
 				{/* img */}
-				<souto>REMOÇÃO DE PACIENTES</souto>
-				<souto>Residência -&gt; Hospital</souto>
-				<souto>(internação/exame)</souto>
-				<souto>Hospital -&gt; Residência</souto>
-				<souto>(Alta hospitalar)</souto>
-				<souto>Residência -&gt; Clínica/consultório -&gt; Residência</souto>
-				<souto>(Exame)</souto>
-			</souto>
-			<souto>
+				<Souto>REMOÇÃO DE PACIENTES</Souto>
+				<Souto>Residência -&gt; Hospital</Souto>
+				<Souto>(internação/exame)</Souto>
+				<Souto>Hospital -&gt; Residência</Souto>
+				<Souto>(Alta hospitalar)</Souto>
+				<Souto>Residência -&gt; Clínica/consultório -&gt; Residência</Souto>
+				<Souto>(Exame)</Souto>
+			</Souto>
+			<Souto>
 				{/* img */}
-				<souto>COBERTURA MÉDICA DE EVENTOS</souto>
-				<souto>Cobertura médica e infraestrutura completa para qualquer evento, seja ele: esportivo, social, cultural, religioso ou corporativo.</souto>
-			</souto>
-			<souto>
+				<Souto>COBERTURA MÉDICA DE EVENTOS</Souto>
+				<Souto>Cobertura médica e infraestrutura completa para qualquer evento, seja ele: esportivo, social, cultural, religioso ou corporativo.</Souto>
+			</Souto>
+			<Souto>
 				{/* img */}
-				<souto>POSTOS MÉDICOS</souto>
-				<souto>Implantação e gestão de ambulatórios lacais. Segurança garantida onde for preciso</souto>
-			</souto>
-			<souto>
+				<Souto>POSTOS MÉDICOS</Souto>
+				<Souto>Implantação e gestão de ambulatórios lacais. Segurança garantida onde for preciso</Souto>
+			</Souto>
+			<Souto>
 				{/* img */}
-				<souto>LOCAÇÃO DE AMBULÂNCIAS</souto>
-				<souto>Moderna frotas de ambulâncias.</souto>
-				<souto>Flexibilidade do período contratado.</souto>
-			</souto>
+				<Souto>LOCAÇÃO DE AMBULÂNCIAS</Souto>
+				<Souto>Moderna frotas de ambulâncias.</Souto>
+				<Souto>Flexibilidade do período contratado.</Souto>
+			</Souto>
 			<Aberto />
 		</>
 	)
