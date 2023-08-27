@@ -1,5 +1,5 @@
 "use client"
-import { NextResponse } from "next/server";
+// import { NextResponse } from "next/server";
 import { useForm } from "react-hook-form"
 
 export default function Formulario() {
@@ -11,11 +11,11 @@ export default function Formulario() {
 		mode: "onBlur",
 		reValidateMode: 'onBlur',
 		defaultValues: {
-			nome: "Marcelo",
+			nome: "Seu nome",
 			telefone: "11999999999",
 			email: "a@a.com",
-			assunto: "assunto yup",
-			mensagem: "mensagem eba",
+			assunto: "assunto!!!",
+			mensagem: "mensagem!!!",
 		}
 	});
 
@@ -104,7 +104,7 @@ export default function Formulario() {
 								{...register("email", {
 									required: "Email é requerido.",
 									pattern: {
-										value: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$",
+										value: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
 										message: "Email inválido"
 									}
 								})}

@@ -1,9 +1,11 @@
 import Banner from '../components/Banner'
 import Atendimento from '../components/Atendimento'
 import Aberto from '../components/Aberto'
+import Carrossel from '../components/Carrossel'
+
 export function Souto({ children }) {
 	return (
-		<div>${children}</div>
+		<div>{children}</div>
 	)
 }
 export default function Home() {
@@ -33,7 +35,7 @@ export default function Home() {
 				<Souto>Infraestrutura sob comando de profissionais qualificados</Souto>
 			</Souto>
 			<Souto>Serviços que oferecemos</Souto>
-			{/* carrossel */}
+			<Carrossel />
 		</main>
 	)
 }

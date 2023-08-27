@@ -1,37 +1,50 @@
 'use client'
-import teste from '../styles/_teste.sass'
+import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
+import Image from 'next/image'
+import '@splidejs/react-splide/css/core';
 
-import Link from "next/link"
-// import Router from "next/router"
-
-export default () => (
-  <div className="slider">
-    <Link href="#slide-1" scroll={false}>
-      <a>1</a>
-    </Link>
-    <Link href="#slide-2" scroll={false}>
-      <a>2</a>
-    </Link>
-    <Link href="#slide-3" scroll={false}>
-      <a>3</a>
-    </Link>
-    <Link href="#slide-4" scroll={false}>
-      <a>4</a>
-    </Link>
-    <Link href="#slide-5" scroll={false}>
-      <a>5</a>
-    </Link>
-
-    <div className="slides">
-      <div name="slide-1" id="slide-1">
-        1
-      </div>
-      <div name="slide-2" id="slide-2">
-        2
-      </div>
-      <div id="slide-3">3</div>
-      <div id="slide-4">4</div>
-      <div id="slide-5">5</div>
-    </div>
-  </div>
-);
+export default function Carrossel() {
+	return (
+		<>
+			<Splide hasTrack={false} tag="section"
+				options={{
+					type: 'loop',
+					pagination: false,
+					autoplay: true,
+					pauseOnHover: true,
+					resetProgress: false,
+				}}
+			>
+				<SplideTrack>
+					<SplideSlide>
+						<Image src={'/images/servico_resgate-aeromedico.jpg'} width={100} height={100} alt="Resgate aeromédico" />
+						<h3>Resgate Aeromédico</h3>
+					</SplideSlide>
+					<SplideSlide>
+						<Image src={'/images/servico_remocao-ambulancia-particular.jpg'} width={100} height={100} alt="Remoção de pacientes" />
+						<h3>Remoção de pacientes</h3>
+					</SplideSlide>
+					<SplideSlide>
+						<Image src={'/images/servico_ambulancia-cobertura-medica.jpg'} width={100} height={100} alt="Cobertura médica de eventos" />
+						<h3>Cobertura médica de eventos</h3>
+					</SplideSlide>
+					<SplideSlide>
+						<Image src={'/images/servico_posto-medico-evento.jpg'} width={100} height={100} alt="Postos médicos" />
+						<h3>Postos médicos</h3>
+					</SplideSlide>
+					<SplideSlide>
+						<Image src={'/images/servico_locacao-aluguel-ambulancia.jpg'} width={100} height={100} alt="Locação de ambulâncias" />
+						<h3>Locação de ambulâncias</h3>
+					</SplideSlide>
+				</SplideTrack>
+				<section className="splide__progress">
+					<div className="splide__progress__bar" />
+				</section>
+				<section className="splide__arrows">
+					<button className="splide__arrow splide__arrow--prev">{'<'}</button>
+					<button className="splide__arrow splide__arrow--next">{'>'}</button>
+				</section>
+			</Splide>
+		</>
+	)
+}
