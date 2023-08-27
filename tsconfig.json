@@ -5,6 +5,7 @@
 			"dom.iterable",
 			"esnext"
 		],
+		"checkJs": true,
 		"allowJs": true,
 		"skipLibCheck": true,
 		"strict": false,
@@ -27,6 +28,7 @@
 		".next/types/**/*.ts",
 		"**/*.ts",
 		"**/*.tsx",
+		"**/*.js",
 		"app/layout.js"
 	],
 	"exclude": [

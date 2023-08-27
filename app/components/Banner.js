@@ -1,19 +1,30 @@
 import Image from "next/image"
+import Atendimento from "./Atendimento"
 export default function Banner(props) {
-	let page = props.page
+	let { img, alt } = props
 	return (
 		<>
-			<div className="classAlgumaCoisa">
-				<Image
-					src={'/images/bg-ambulancias.jpg'}
-					alt={page}
-					width={1156}
-					height={356}
-					style={{
-						display: 'block'
-					}}
-				/>
-			</div>
+			<section className="sessao-banner">
+				<header>
+					<div className="sobreposta"></div>
+					<Image
+						src={`/images/${img}.jpg`}
+						alt={alt}
+						fill
+					/>
+				</header>
+				<main>
+					<Image
+						src={'/svg/frase-efeito-removip.svg'}
+						alt={'Sua tranquilidade em boas mãos.'}
+						width={700}
+						height={700}
+					/>
+				</main>
+				<footer>
+					<Atendimento />
+				</footer>
+			</section>
 		</>
 	)
 }

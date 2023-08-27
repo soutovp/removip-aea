@@ -1,8 +1,16 @@
+import Image from "next/image"
+
 export default function Atendimento() {
 	return (
 		<>
-			<button>PEÇA AGORA VIA WHATSAPP</button>
-			<button>PEÇA AGORA POR TELEFONE</button>
+			<button><strong>PEÇA AGORA</strong> VIA WHATSAPP</button>
+			<Image
+				src={'/svg/ambulancia.svg'}
+				width={50}
+				height={50}
+				alt="Icone ambulância"
+			/>
+			<button><strong>PEÇA AGORA</strong> POR TELEFONE</button>
 		</>
 	)
 }
