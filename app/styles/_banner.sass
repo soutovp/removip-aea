@@ -2,42 +2,67 @@ section.sessao-banner
 	height: fit-content
 	header
 		width: 100%
-		height: 750px
+		height: 600px
 		display: block
 		position: relative
+		@include media-small
+			max-height: 500px
 		img
+			margin-top: 65px
 			position: relative
 			object-fit: cover
 			width: 100%
 			height: 100%
-			z-index: -1
+			@include media-small
+				margin-top: 0px
+				max-height: 500px
 		.sobreposta
 			position: absolute
-			background-image: linear-gradient(rgba(0,0,0,0) ,rgba(0,0,0,.0),rgba(0,0,0,0) ,rgba(0,0,0,.0),rgba(121, 27, 40, .25),rgba(121, 27, 40, .5), #791B28)
+			background-image: linear-gradient(rgba(0,0,0,0) 60%, $primary )
 			width: 100%
-			height: 100%
+			height: calc(100% + 65px )
+			z-index: 2
+			@include media-small
+				height: 100%
 	main
 		position: relative
-		height: 250px
-		img
-			position: relative
-			top: -350px
+		height: fit-content
+		padding-bottom: 170px
+		display: flex
+		flex-direction: column
+		align-items: center
+		@include media-small
+			padding-bottom: 100px
+		.tranquilidade
+			position: absolute
+			top: -100px
+			z-index: 2
 			@include media-medium
 				max-width: 600px
 			@include media-small
-				max-width: 300px
-				top: -360px
-	footer
-		display: flex
-		flex-direction: row
-		justify-content: center
-		gap: 25px
-		button
-			padding: 20px 10px
-			font-family: 'Quicksand'
-			font-weight: medium
-			border: none
-			background: $secondary
-			border-radius: 5px
-			strong
-				font-weight: bold
+				max-width: 350px
+				top: -170px
+		.atendimento
+			position: relative
+			top: 250px
+			display: flex
+			flex-direction: row
+			justify-content: center
+			align-items: center
+			gap: 25px
+			@include media-small
+				flex-direction: column
+				top: 120px
+			button
+				padding: 20px 50px
+				font-family: 'Quicksand'
+				font-weight: medium
+				font-size: 1.1em
+				border: none
+				background: $secondary
+				border-radius: 5px
+				color: $primary
+				&:hover
+					cursor: pointer
+				strong
+					font-weight: bold

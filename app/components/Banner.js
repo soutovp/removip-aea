@@ -8,7 +8,7 @@ export default function Banner(props) {
 				<header>
 					<div className="sobreposta"></div>
 					<Image
-						src={`/images/${img}.jpg`}
+						src={`/images/${img}.png`}
 						alt={alt}
 						fill
 					/>
@@ -17,13 +17,14 @@ export default function Banner(props) {
 					<Image
 						src={'/svg/frase-efeito-removip.svg'}
 						alt={'Sua tranquilidade em boas mãos.'}
-						width={700}
-						height={700}
+						width={781}
+						height={297}
+						className="tranquilidade"
 					/>
+					<div className="atendimento">
+						<Atendimento />
+					</div>
 				</main>
-				<footer>
-					<Atendimento />
-				</footer>
 			</section>
 		</>
 	)

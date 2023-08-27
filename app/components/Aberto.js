@@ -1,11 +1,10 @@
-import { Souto } from "../home/page";
-
+import '../styles/components/aberto.sass'
 export default function Aberto() {
 	return (
-		<>
-			<Souto>Atendimento 24h</Souto>
-			<Souto>removip@removip.com.br</Souto>
-			<Souto>(21)3040-2666</Souto>
-		</>
+		<div id='aberto'>
+			<h1>Atendimento 24h</h1>
+			<p>removip@removip.com.br</p>
+			<p>(21)3040-2666</p>
+		</div>
 	)
 }

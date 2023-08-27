@@ -1,22 +1,27 @@
+@import layout
 button#hamburger
-	position: absolute
-	background: transparent
+	position: fixed
+	backgound-color: $primary
 	border: none
-	border-radius: 2px
+	border-radius: 5px
 	padding: 5px
 	left: 5px
 	top: 5px
-	color: $secondary
 	z-index: 999
+	margin: 15px
 header#menu
 	display: block
+	position: fixed
+	background-color: $primary
+	width: 100%
 	transform: translateX(0)
+	z-index: 999
 	@include media-small
 		transition: 1s
 		height: 100%
 		width: 100%
 		background-color: $primary
-		position: absolute
+		position: fixed
 		transform: translateX(-100%)
 		z-index: 998
 	nav.headerNav
@@ -37,14 +42,14 @@ header#menu
 		font-weight: 300
 		@include media-small
 			flex-direction: column
+			align-items: center
+			padding: 0
 		a
 			font-family: 'Quicksand'
 			color: $secondary
 			text-decoration: none
 			@include media-small
-				color: black
 				padding: 15px
-				// background-color: rgba(0,0,0,.3)
 			&:hover
 				font-weight: bold
 	.headerActiveLink
@@ -56,3 +61,5 @@ header#menu
 		display: flex
 		flex-direction: row
 		gap: 50px
+		@include media-small
+			padding: 0

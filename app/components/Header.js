@@ -28,10 +28,8 @@ export default function Header() {
 		if (mobile) {
 			if (showHide === 'translateX(0px)') {
 				setShowHide('translateX(-100%)')
-				setColorChange('#791B28')
 			} else {
 				setShowHide('translateX(0px)')
-				setColorChange('#EBEAEA')
 			}
 		}
 	}
