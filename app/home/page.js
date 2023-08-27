@@ -2,6 +2,7 @@ import Banner from '../components/Banner'
 import Atendimento from '../components/Atendimento'
 import Aberto from '../components/Aberto'
 import Carrossel from '../components/Carrossel'
+import Image from 'next/image'
 
 export function Souto({ children }) {
 	return (
@@ -11,9 +12,7 @@ export function Souto({ children }) {
 export default function Home() {
 	return (
 		<main>
-			<Banner page={'home'} />
-			<Souto>SUA TRANQUILIDADE EM BOAS MÃOS</Souto> {/*Sugiro criar um png com fundo transparente com o texto e imagem dessa parte */}
-			<Atendimento />
+			<Banner alt={'Background de ambulancias'} img={'bg-ambulancias'} />
 			<Souto>
 				Serviço de ambulância particular para atendimentos, remoções, altas e exames emergenciais.
 			</Souto>

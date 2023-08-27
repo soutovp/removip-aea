@@ -1,23 +1,23 @@
 button#hamburger
 	position: absolute
 	background: transparent
-	border: 1px solid $secondary
+	border: none
 	border-radius: 2px
 	padding: 5px
 	left: 5px
 	top: 5px
 	color: $secondary
 	z-index: 999
-header
+header#menu
 	display: block
-	border-bottom: 1px solid $secondary
+	transform: translateX(0)
 	@include media-small
 		transition: 1s
 		height: 100%
 		width: 100%
-		background-color: $secondary
+		background-color: $primary
 		position: absolute
-		transform: translateX(0)
+		transform: translateX(-100%)
 		z-index: 998
 	nav.headerNav
 		display: flex
