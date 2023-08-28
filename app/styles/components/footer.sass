@@ -3,23 +3,65 @@ section.footer
 	background-color: $tertiary
 	main
 		display: grid
-		grid-template-columns: auto auto auto
+		grid-template-areas: 'first divider last'
 		width: 50%
-		height: 200px
-		align-items: center
 		margin: auto
-		div
+		justify-content: center
+		@include media-small
 			width: 100%
-			div
+			grid-template-areas: 'first' 'divider' 'last'
+
+		> div
+			grid-area: divider
+			display: flex
+			align-items: center
+			justify-content: center
+			width: 300px
+			@include media-small
+				width: auto
+			> div
 				width: 5px
-				height: 100%
+				height: 70%
 				background-color: $secondary
+				border-radius: 2.5px
+				@include media-small
+					height: 5px
+					width: 80%
 		aside
-			// width: 100%
+			width: 300px
+			padding: 15px
+			justify-content: center
+			display: flex
+			flex-direction: column
+			@include media-small
+				padding: 15px 0
+				align-items: center
+				margin: auto
+				p
+					text-align: center
+					// text-align-last: justify
+					text-justify: auto
+		aside:first-child
+			grid-area: first
+			text-align: start
+			p
+				margin: 0
+		aside:last-child
+			grid-area: last
+			align-content: flex-end
+			div
+				display: flex
+				flex-direction: column
+				text-align: start
+				margin: 10px 0
+				p
+					margin: 0
 footer
 	display: flex
 	align-items: center
 	justify-content: center
+	@include media-small
+		font-size: 12px
 	p
 		display: inline-block
 		margin-right: 25px

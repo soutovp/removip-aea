@@ -3,11 +3,13 @@
 	> div.background-image
 		background-image: url('/svg/padrao-fundo-1.svg')
 		background-color: $primary
+		background-size: 100%
 		position: relative
 		height: 400px
 		z-index: -1
 		@include media-small
 			height: 300px
+			background-size: 250%
 		> div.background-image-2
 			background-image: linear-gradient($primary 10%, rgba(0,0,0,0) )
 			height: 100px
@@ -19,13 +21,16 @@
 			margin: auto
 			margin-top: 150px
 			font-size: 40px
-			width: 40%
+			width: 60%
 			@include media-small
 				font-size: 20px
 				width: 90%
 				margin-top: 50px
 			@include media-medium
+				width: 60%
 				font-size: 30px
+			@include media-xlarge
+				font-size: 3em
 	> section.home-section-first
 		background-color: $secondary
 		color: $primary
@@ -56,7 +61,11 @@
 	section.carrossel
 		background-image: url('/svg/padrao-fundo-2.svg')
 		background-color: $primary
-		background-size: 100%
+		background-size: 80%
+		@include media-small
+			background-size: 200%
+		> h2
+			padding-top: 25px
 		> div
 			padding: 5px
 			div
@@ -70,7 +79,7 @@
 								max-width: 300px
 								max-height: 150px
 			div:nth-child(3)
-				margin: 25px 0
+				margin: 25px auto
 				button
 					background-color: transparent
 					border: none

@@ -19,12 +19,15 @@ export default function Footer() {
 						<div></div>
 					</div>
 					<aside>
-
-						<Souto>Rua João Torquato, 248</Souto>
-						<Souto>Bomsucesso - Rio de Janeiro - RJ</Souto>
-						<Souto>CEP 21032-150</Souto>
-						<Souto>removip@removip.com.br</Souto>
-						<Souto>(21)3040-2666</Souto>
+						<div>
+							<p>Rua João Torquato, 248</p>
+							<p>Bomsucesso - Rio de Janeiro - RJ</p>
+							<p>CEP 21032-150</p>
+						</div>
+						<div>
+							<p>removip@removip.com.br</p>
+							<p>(21)3040-2666</p>
+						</div>
 					</aside>
 				</main>
 			</section>

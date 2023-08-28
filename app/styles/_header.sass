@@ -44,14 +44,18 @@ header#menu
 			flex-direction: column
 			align-items: center
 			padding: 0
-		a
+		li
+			@include media-small
+				margin: 15px 0
+		li a
 			font-family: 'Quicksand'
 			color: $secondary
 			text-decoration: none
+			&:hover
+				font-weight: 600
 			@include media-small
 				padding: 15px
-			&:hover
-				font-weight: bold
+				font-size: 24px
 	.headerActiveLink
 		font-weight: 600
 		&:hover
