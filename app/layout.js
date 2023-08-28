@@ -6,6 +6,7 @@ export default function RootLayout({ children }) {
 		<html lang="pt-br">
 			<head>
 				<link rel="icon" href="/favicon.ico" />
+				<title>Removip</title>
 			</head>
 			<body>
 				<Header />
