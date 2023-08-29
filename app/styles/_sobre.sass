@@ -1,0 +1,33 @@
+@import layout
+section.sessao-banner
+	div
+		div.atendimento
+			position: absolute
+			top: -400px
+			z-index: 900
+main
+	section.sobre
+		background-image: linear-gradient(to bottom, $primary 5%,$tertiary)
+		div.sobre-first-article
+			width: 60%
+			margin: auto
+			@include media-small
+				width: 90%
+			article
+				p
+					text-align: start
+			div.sobre-divider
+				height: 5px
+				width: 60%
+				background-color: $secondary
+				border-radius: 2.5px
+				margin: 50px 0
+			div.sobre-articles
+				display: grid
+				grid-template-columns: 'visao valores' 'missao missao'
+				article:nth-child(1)
+					grid-area: visao
+				article:nth-child(2)
+					grid-area: valores
+				article:nth-child(3)
+					grid-area: missao

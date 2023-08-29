@@ -64,9 +64,6 @@ export default function Header() {
 								<Link href="servicos" onClick={openMenu}>Serviços</Link>
 							</li>
 							<li>
-								<Link href="#" onClick={openMenu}>Blog</Link>
-							</li>
-							<li>
 								<Link href="contato" onClick={openMenu}>Contato</Link>
 							</li>
 						</ul>

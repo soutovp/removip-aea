@@ -1,5 +1,8 @@
 import Image from "next/image"
-
+/**
+ *
+ * São botões dentro da página que levam o usuário para o whatsapp e para ligação por telefone.
+ */
 export default function Atendimento() {
 	return (
 		<>

@@ -13,7 +13,7 @@ export default function Banner(props) {
 						fill
 					/>
 				</header>
-				<main>
+				<div>
 					<Image
 						src={'/svg/frase-efeito-removip.svg'}
 						alt={'Sua tranquilidade em boas mãos.'}
@@ -24,7 +24,7 @@ export default function Banner(props) {
 					<div className="atendimento">
 						<Atendimento />
 					</div>
-				</main>
+				</div>
 			</section>
 		</>
 	)
