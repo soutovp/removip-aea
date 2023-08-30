@@ -42,7 +42,7 @@ export default function Header() {
 					<path d="M20 17L4 17" stroke={colorChange} strokeWidth="1.5" strokeLinecap="round" />
 				</svg>
 			</button>
-			<header id="menu" ref={menu} style={{ transform: showHide }}>
+			<div id="menu" ref={menu} style={{ transform: showHide }}>
 				<nav className="headerNav widthLimitation">
 					<div>
 						<Image
@@ -84,7 +84,7 @@ export default function Header() {
 						</ul>
 					</div>
 				</nav>
-			</header>
+			</div>
 		</>
 	)
 }

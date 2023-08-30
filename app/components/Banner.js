@@ -6,14 +6,14 @@ export default function Banner(props) {
 		<>
 			<section className="sessao-banner">
 				<header>
-					<div className="sobreposta"></div>
+					<div className="sobreposta" tabIndex={-1}></div>
 					<Image
 						src={`/images/${img}.png`}
 						alt={alt}
 						fill
 					/>
 				</header>
-				<div>
+				<div className="sessao-banner-div">
 					<Image
 						src={'/svg/frase-efeito-removip.svg'}
 						alt={'Sua tranquilidade em boas mãos.'}

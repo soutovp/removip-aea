@@ -1,16 +1,19 @@
 import './styles/style.sass'
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Head from 'next/head'
 export default function RootLayout({ children }) {
 	return (
 		<html lang="pt-br">
-			<Head>
+			<head>
 				<title>Removip</title>
-			</Head>
+			</head>
 			<body>
-				<Header />
-				{children}
+				<header>
+					<Header />
+				</header>
+				<main>
+					{children}
+				</main>
 				<Footer />
 			</body>
 		</html>

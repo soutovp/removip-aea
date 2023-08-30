@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image"
 /**
  *
@@ -6,8 +7,8 @@ import Image from "next/image"
 export default function Atendimento() {
 	return (
 		<>
-			<a href="https://whatsa.me/5521970769075/?t=Ol%C3%A1">
-				<button><strong>PEÇA AGORA</strong> VIA WHATSAPP</button>
+			<a href="https://whatsa.me/5521970769075/?t=Ol%C3%A1" target="_blank">
+				<button tabIndex={-1}><strong>PEÇA AGORA</strong> VIA WHATSAPP</button>
 			</a>
 			<Image
 				src={'/svg/ambulancia.svg'}
@@ -16,7 +17,7 @@ export default function Atendimento() {
 				alt="Icone ambulância"
 			/>
 			<a href="tel:+5521970769075">
-				<button><strong>PEÇA AGORA</strong> POR TELEFONE</button>
+				<button tabIndex={-1}><strong>PEÇA AGORA</strong> POR TELEFONE</button>
 			</a>
 		</>
 	)

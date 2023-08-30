@@ -18,8 +18,8 @@ export default function Home() {
 			<main className='home'>
 				<Banner alt={'Background de ambulancias'} img={'bg-ambulancias'} />
 				<div className='background-image'>
-					<div className='background-image-2'></div>
-					<p className='servicoAmbulancia'>
+					<div className='background-image-2' tabIndex={-1}></div>
+					<p className='servicoAmbulancia' tabIndex={1}>
 						Serviço de ambulância particular para atendimentos, remoções, altas e exames emergenciais.
 					</p>
 					<Aberto />
