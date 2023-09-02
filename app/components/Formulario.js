@@ -1,6 +1,7 @@
 "use client"
 // import { NextResponse } from "next/server";
 import { useForm } from "react-hook-form"
+import { toast } from 'react-toastify';
 
 export default function Formulario() {
 	const {
@@ -9,38 +10,50 @@ export default function Formulario() {
 		formState: { errors },
 	} = useForm({
 		mode: "onBlur",
-		reValidateMode: 'onBlur',
+		// reValidateMode: 'onBlur',
 		defaultValues: {
-			nome: "Seu nome",
-			telefone: "11999999999",
-			email: "a@a.com",
-			assunto: "assunto!!!",
-			mensagem: "mensagem!!!",
+			nome: "",
+			telefone: "",
+			email: "",
+			assunto: "",
+			mensagem: "",
 		}
 	});
 
 	// const onSubmit = (data) => console.log('data');
 
-	const onSubmit = (data) => {
-		//console.log(data)
-		fetch('/api/contato', {
-			method: 'POST',
-			headers: {
-				// 'Accept': 'application/json, text/plain, */*',
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify(data) // Serializa o objeto data para JSON
-		})
-			.then(async (res) => {
-				console.log('Resposta recebida');
-				const { message } = await res.json()
-				console.log(message)
-			})
+	const onSubmit = async (data) => {
+		const waitNotificationId = toast.info('Aguarde...');
 
-		// console.log(JSON.stringify(data))
+		try {
+			const response = await fetch('/api/contato', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(data)
+			});
+
+			// console.log('Resposta recebida');
+			const { message, status } = await response.json();
+			toast.update(waitNotificationId, {
+				render: message,
+				type: status === 200 ? toast.TYPE.SUCCESS : toast.TYPE.ERROR,
+			});
+		} catch (error) {
+			// console.error('Erro ao fazer a solicitação:', error);
+			toast.error('Erro ao enviar a mensagem');
+		}
 	};
 
-	const onError = (errors) => console.log(errors);
+	const onError = (errors) => {
+
+	}
+
+	errors?.nome && (toast.error(errors.nome.message, { autoClose: 3000 }))
+	errors?.telefone && (toast.error(errors.telefone.message, { autoClose: 3000 }))
+	errors?.email && (toast.error(errors.email.message, { autoClose: 3000 }))
+	errors?.assunto && (toast.error(errors.assunto.message, { autoClose: 3000 }))
 
 	return (
 		<div>
@@ -69,9 +82,7 @@ export default function Formulario() {
 								autoComplete="given-nome"
 							/>
 						</div>
-						{errors?.nome && (
-							<span>{errors.nome.message}</span>
-						)}
+
 					</div>
 					<div >
 						<label
@@ -89,9 +100,7 @@ export default function Formulario() {
 								autoComplete="tel"
 							/>
 						</div>
-						{errors?.telefone && (
-							<span>{errors.telefone.message}</span>
-						)}
+
 					</div>
 					<div>
 						<label
@@ -113,9 +122,7 @@ export default function Formulario() {
 								autoComplete="email"
 							/>
 						</div>
-						{errors?.email && (
-							<span>{errors.email.message}</span>
-						)}
+
 					</div>
 					<div>
 						<label
