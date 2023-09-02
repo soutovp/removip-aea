@@ -23,7 +23,7 @@ export async function POST(req, res) {
   // Defina os detalhes do e-mail que você deseja enviar
   const mailOptions = {
     from: emailUser,
-    to: 'headbanger.87@hotmail.com',
+    to: emailUser,
     subject: `${nome} - ${assunto}`,
     text: `
     Nome: ${nome}
