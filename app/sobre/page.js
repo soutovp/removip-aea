@@ -1,7 +1,10 @@
 import Banner from '../components/Banner'
 import Aberto from '../components/Aberto'
-import '../styles/_sobre.sass'
+// import '../styles/_sobre.sass'
+import pageSobre from '../styles/pages/sobre/page.module.sass'
 import Head from 'next/head'
+import Atendimento from '../components/Atendimento'
+// import atendimento from '../styles/pages/sobre/atendimento.module.sass'
 export default function Page() {
 	return (
 		<>
@@ -9,7 +12,8 @@ export default function Page() {
 				<title>Removip - Sobre</title>
 			</Head>
 			<main>
-				<Banner alt={'Background de ambulancias'} img={'bg-ambulancias2'} />
+				<Banner alt={'Background de ambulancias'} img={'bg-ambulancias2'} className={pageSobre.sessaoBanner} />
+				<Atendimento className={pageSobre.atendimento} />
 				<section className='sobre'>
 					<div className='sobre-first-article'>
 						<article>

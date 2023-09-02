@@ -4,6 +4,8 @@ import Carrossel from '../components/Carrossel'
 import '../styles/_home.sass'
 import Image from 'next/image'
 import Head from 'next/head'
+import Atendimento from '../components/Atendimento'
+import atendimento from '../styles/pages/home/atendimento.module.sass'
 export function Souto({ children }) {
 	return (
 		<div>{children}</div>
@@ -17,6 +19,7 @@ export default function Home() {
 			</Head>
 			<main className='home'>
 				<Banner alt={'Background de ambulancias'} img={'bg-ambulancias'} />
+				<Atendimento className={atendimento.atendimento} />
 				<div className='background-image'>
 					<div className='background-image-2' tabIndex={-1}></div>
 					<p className='servicoAmbulancia' tabIndex={1}>

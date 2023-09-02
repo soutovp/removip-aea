@@ -1,10 +1,9 @@
 import Image from "next/image"
-import Atendimento from "./Atendimento"
-export default function Banner(props) {
-	let { img, alt } = props
+import bannerStyle from '../styles/components/banner.module.sass'
+export default function Banner({ className = null, alt, img }) {
 	return (
 		<>
-			<section className="sessao-banner">
+			<section className={`${bannerStyle.sessaoBanner} ${className}`}>
 				<header>
 					<div className="sobreposta" tabIndex={-1}></div>
 					<Image
@@ -21,9 +20,6 @@ export default function Banner(props) {
 						height={297}
 						className="tranquilidade"
 					/>
-					<div className="atendimento">
-						<Atendimento />
-					</div>
 				</div>
 			</section>
 		</>

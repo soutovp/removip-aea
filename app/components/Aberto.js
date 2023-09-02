@@ -1,7 +1,7 @@
-import '../styles/components/aberto.sass'
+import aberto from '../styles/components/aberto.module.sass'
 export default function Aberto() {
 	return (
-		<div id='aberto'>
+		<div className={aberto.aberto}>
 			<h1>Atendimento 24h</h1>
 			<p>removip@removip.com.br</p>
 			<p>(21)3040-2666</p>
