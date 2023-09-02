@@ -1,0 +1,31 @@
+.backgroundImage
+	background-image: url('/svg/padrao-fundo-1.svg')
+	background-color: $primary
+	background-size: 100%
+	position: relative
+	height: 400px
+	z-index: -1
+	@include media-small
+		height: 300px
+		background-size: 250%
+	div:first-child
+		background-image: linear-gradient($primary 10%, rgba(0,0,0,0) )
+		height: 100px
+		width: 100%
+		position: absolute
+		z-index: inherit
+	> p
+		font-size: 1.4em
+		margin: auto
+		margin-top: 150px
+		font-size: 40px
+		width: 60%
+		@include media-small
+			font-size: 20px
+			width: 90%
+			margin-top: 50px
+		@include media-medium
+			width: 60%
+			font-size: 30px
+		@include media-xlarge
+			font-size: 3em

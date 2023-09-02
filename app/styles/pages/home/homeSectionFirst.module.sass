@@ -1,0 +1,28 @@
+.homeSectionFirst
+	background-color: $secondary
+	color: $primary
+	padding: 0 20%
+	@include media-small
+		padding: 0
+	@include media-medium
+		padding: 0 10%
+	> ul
+		list-style: none
+		display: grid
+		grid-template-columns: auto auto
+		grid-gap: 50px
+		margin: auto
+		padding: 0
+		@include media-small
+			grid-template-columns: auto
+			width: 90%
+			padding: 100px 0
+		@include media-medium
+			width: auto
+		li
+			margin: auto
+			width: 250px
+			height: 250px
+			position: relative
+			display: flex
+			align-items: center

@@ -5,6 +5,9 @@ import pageSobre from '../styles/pages/sobre/page.module.sass'
 import Head from 'next/head'
 import Atendimento from '../components/Atendimento'
 // import atendimento from '../styles/pages/sobre/atendimento.module.sass'
+export const metadata = {
+	title: 'Removip - Sobre'
+}
 export default function Page() {
 	return (
 		<>
