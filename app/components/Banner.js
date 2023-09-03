@@ -6,11 +6,13 @@ export default function Banner({ className = null, alt, img }) {
 			<section className={`${bannerStyle.sessaoBanner} ${className}`}>
 				<header>
 					<div className="sobreposta" tabIndex={-1}></div>
-					<Image
-						src={`/images/${img}.png`}
-						alt={alt}
-						fill
-					/>
+					<div>
+						<img
+							src={`/images/${img}.png`}
+							alt={alt}
+						/>
+					</div>
+					{/* <div></div> */}
 				</header>
 				<div className="sessao-banner-div">
 					<Image

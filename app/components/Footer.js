@@ -13,9 +13,7 @@ export default function Footer() {
 					/>
 					<p>A removip é uma empresa especializada em locação de ambulâcias, remoção de pacientes e cobertura médica de eventos</p>
 				</aside>
-				<div>
-					<div></div>
-				</div>
+				<hr />
 				<aside>
 					<div>
 						<p>Rua João Torquato, 248</p>

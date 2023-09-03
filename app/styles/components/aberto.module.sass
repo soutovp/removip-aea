@@ -1,6 +1,12 @@
+@import ../layout
 .aberto
 	padding: 75px 0
-	h1
-		font-size: 2.5em
+	@include media-small
+		padding: 25px 0
+		h1
+			font-size: $font-medium
 	p
+		font-size: $font-medium
 		margin: 12px
+		@include media-small
+			font-size: $font-primary

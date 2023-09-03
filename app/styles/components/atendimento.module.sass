@@ -8,15 +8,19 @@
 	@include media-small
 		flex-direction: column
 	button
-		padding: 20px 50px
+		padding: 30px 25px
 		font-family: 'Quicksand'
-		font-weight: medium
-		font-size: 1.1em
+		font-weight: 400
+		font-size: $font-medium
 		border: none
 		background: $secondary
-		border-radius: 5px
+		border-radius: 10px
 		color: $primary
 		&:hover
 			cursor: pointer
-			strong
-				font-weight: bold
+		strong
+			font-weight: 700
+		@include media-small
+			font-size: $font-primary
+		@include media-medium
+			font-size: $font-primary

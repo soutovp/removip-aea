@@ -10,22 +10,15 @@
 		@include media-small
 			width: 100%
 			grid-template-areas: 'first' 'divider' 'last'
-		> div
-			grid-area: divider
-			display: flex
-			align-items: center
-			justify-content: center
-			width: 300px
+		> hr
+			width: 5px
+			height: 70%
+			background-color: $secondary
+			border-radius: 2.5px
+			margin: auto
 			@include media-small
-				width: auto
-			> div
-				width: 5px
-				height: 70%
-				background-color: $secondary
-				border-radius: 2.5px
-				@include media-small
-					height: 5px
-					width: 80%
+				height: 5px
+				width: 80%
 		aside
 			width: 300px
 			padding: 15px
@@ -39,7 +32,6 @@
 				width: 90%
 				> p
 					text-align: center
-					// text-align-last: justify
 					text-justify: auto
 		aside:first-child
 			grid-area: first
@@ -53,11 +45,13 @@
 				display: flex
 				flex-direction: column
 				text-align: start
-				margin: 10px 0
+				&:first-child
+					margin-bottom: 10px
 				> p
 					margin: 0
 				@include media-small
 					width: 100%
+					text-align: center
 	> div:last-child
 		display: flex
 		align-items: center

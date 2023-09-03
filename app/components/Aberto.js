@@ -1,4 +1,11 @@
 import aberto from '../styles/components/aberto.module.sass'
+/**
+ * Atendimento 24h
+
+ * removip@removip.com.br
+
+ * (21)3042-2666
+ */
 export default function Aberto({ className = null }) {
 	return (
 		<div className={`${aberto.aberto} ${className}`}>

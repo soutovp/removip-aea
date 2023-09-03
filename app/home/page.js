@@ -10,7 +10,7 @@ export default function Home() {
 		<>
 			<Banner alt={'Background de ambulancias'} img={'bg-ambulancias'} />
 			<Atendimento className={homeStyle.atendimento} />
-			<div className={homeStyle.backgroundImage}>
+			<div className={homeStyle.servicoAtendimento}>
 				<div tabIndex={-1}></div>
 				<p tabIndex={1}>
 					Serviço de ambulância particular para atendimentos, remoções, altas e exames emergenciais.

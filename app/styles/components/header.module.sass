@@ -38,12 +38,13 @@
 		display: flex
 		flex-direction: row
 		gap: 15px
-		font-size: 16px
+		font-size: $font-primary
 		font-weight: 300
 		@include media-small
 			flex-direction: column
 			align-items: center
 			padding: 0
+			font-size: $font-medium
 		li
 			@include media-small
 				margin: 15px 0
@@ -55,11 +56,10 @@
 				font-weight: 600
 			@include media-small
 				padding: 15px
-				font-size: 24px
 	.headerActiveLink
 		font-weight: 600
 		&:hover
-			font-weight: normal
+			font-weight: 400
 	div:last-child ul
 		list-style: none
 		display: flex
