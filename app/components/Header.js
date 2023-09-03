@@ -53,7 +53,7 @@ export default function Header() {
 						/>
 					</div>
 					<div>
-						<ul className='headerMenu'>
+						<ul>
 							<li>
 								<Link className="headerActiveLink" href="/" onClick={openMenu}>Home</Link>
 							</li>
