@@ -4,45 +4,64 @@ import React, { useEffect, useState, useRef, useLayoutEffect } from "react"
 import Link from "next/link"
 import headerStyle from '../styles/components/header.module.sass'
 export default function Header() {
-	const [mobile, setMobile] = useState(false)
-	const [colorChange, setColorChange] = useState('#791B28')
-	const [showHide, setShowHide] = useState('translateX(0px)')
-	const hamburger = useRef(null)
-	const menu = useRef(null)
-	useLayoutEffect(() => {
-		setMobile(window.innerWidth <= 768)
-	})
+	const [menuInfo, setMenuInfo] = useState({
+		mobile: false,
+		showHide: 'translateX(0px)',
+	});
+
+	const hamburger = useRef(null);
+	const menu = useRef(null);
+
 	useEffect(() => {
-		window.addEventListener('resize', () => {
-			setMobile(window.innerWidth <= 768)
-		})
-		if (!mobile) {
-			setShowHide('translateX(0px)')
-			hamburger.current.style.display = 'none'
+		const handleResize = () => {
+			setMenuInfo((prevMenuInfo) => ({
+				...prevMenuInfo,
+				mobile: window.innerWidth <= 768,
+			}));
+		};
+
+		window.addEventListener('resize', handleResize);
+		handleResize(); // Estado inicial
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
+	useEffect(() => {
+		if (!menuInfo.mobile) {
+			setMenuInfo((prevMenuInfo) => ({
+				...prevMenuInfo,
+				showHide: 'translateX(0px)',
+			}));
+			hamburger.current.style.display = 'none';
 		} else {
-			setShowHide('translateX(-100%)')
-			hamburger.current.style.display = 'block'
+			setMenuInfo((prevMenuInfo) => ({
+				...prevMenuInfo,
+				showHide: 'translateX(-100%)',
+			}));
+			hamburger.current.style.display = 'block';
 		}
-	}, [mobile])
+	}, [menuInfo.mobile]);
+
 	function openMenu() {
-		if (mobile) {
-			if (showHide === 'translateX(0px)') {
-				setShowHide('translateX(-100%)')
-			} else {
-				setShowHide('translateX(0px)')
-			}
+		if (menuInfo.mobile) {
+			setMenuInfo((prevMenuInfo) => ({
+				...prevMenuInfo,
+				showHide: prevMenuInfo.showHide === 'translateX(0px)' ? 'translateX(-100%)' : 'translateX(0px)',
+			}));
 		}
 	}
 	return (
 		<>
 			<button ref={hamburger} className={headerStyle.hamburger} onClick={openMenu}>
 				<svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path d="M20 7L4 7" stroke={colorChange} strokeWidth="1.5" strokeLinecap="round" />
-					<path d="M20 12L4 12" stroke={colorChange} strokeWidth="1.5" strokeLinecap="round" />
-					<path d="M20 17L4 17" stroke={colorChange} strokeWidth="1.5" strokeLinecap="round" />
+					<path d="M20 7L4 7" stroke='#791B28' strokeWidth="1.5" strokeLinecap="round" />
+					<path d="M20 12L4 12" stroke='#791B28' strokeWidth="1.5" strokeLinecap="round" />
+					<path d="M20 17L4 17" stroke='#791B28' strokeWidth="1.5" strokeLinecap="round" />
 				</svg>
 			</button>
-			<div className={headerStyle.menu} ref={menu} style={{ transform: showHide }}>
+			<div className={headerStyle.menu} ref={menu} style={{ transform: menuInfo.showHide }}>
 				<nav className="headerNav widthLimitation">
 					<div>
 						<Image
