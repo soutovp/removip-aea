@@ -1,0 +1,32 @@
+@import ../../layout
+.sobre
+	background-image: linear-gradient(to bottom, $primary-extra-light ,$primary 30%)
+	padding: 100px 0
+	> div
+		width: 50%
+		margin: auto
+		@include media-small
+			width: 90%
+		p, h2
+			text-align: justify
+		> hr
+			height: 5px
+			width: 60%
+			background-color: $secondary
+			border-radius: 2.5px
+			margin: 50px 0
+		> div
+			display: grid
+			grid-template-areas: "visao valores" "missao missao"
+			@include media-small
+				grid-template-areas: 'visao' 'valores' 'missao'
+			gap: 50px
+			article
+				h2
+					text-align: start
+			article:nth-child(1)
+				grid-area: visao
+			article:nth-child(2)
+				grid-area: valores
+			article:nth-child(3)
+				grid-area: missao

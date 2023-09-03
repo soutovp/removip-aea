@@ -1,10 +1,9 @@
 import Banner from '../components/Banner'
 import Aberto from '../components/Aberto'
-// import '../styles/_sobre.sass'
 import pageSobre from '../styles/pages/sobre/page.module.sass'
 import Head from 'next/head'
 import Atendimento from '../components/Atendimento'
-// import atendimento from '../styles/pages/sobre/atendimento.module.sass'
+import Image from 'next/image'
 export const metadata = {
 	title: 'Removip - Sobre'
 }
@@ -16,16 +15,16 @@ export default function Page() {
 			</Head>
 			<Banner alt={'Background de ambulancias'} img={'bg-ambulancias2'} className={pageSobre.sessaoBanner} />
 			<Atendimento className={pageSobre.atendimento} />
-			<section className='sobre'>
-				<div className='sobre-first-article'>
+			<section className={pageSobre.sobre}>
+				<div>
 					<article>
 						<header>
 							<h2>Sobre</h2>
 						</header>
 						<p>Removip é uma empresa especializada em locação de ambulâncias, remoção de pacientes e cobertura médica de eventos. Nossa frota de ambulâncias é totalmente equipada com o que há de mais moderno e funcional para atendimento em unidades móveis e nossa equipe é formada por profissionais com extensa experiência e profundo treinamento nesse mercado. Nossa empresa, assim como toda nossa frota, é homologada pela ANVISA = Agência Nacional de Vigilância Sanitária e nosso quadro de colaboradores inclui médicos, enfermeiros e farmacêuticos resposáveis técnicos por suas respectivas áreas.</p>
 					</article>
-					<div className='sobre-divider'></div>
-					<div className='sobre-articles'>
+					<hr />
+					<div>
 						<article>
 							<header>
 								<h2>Visão</h2>
@@ -47,8 +46,17 @@ export default function Page() {
 					</div>
 				</div>
 			</section>
-			{/* vídeo */}
-			<Aberto />
+			<section className={pageSobre.video}>
+				<div>
+					<Image
+						src={`/images/bg-ambulancias.png`}
+						alt={'Background de ambulancias'}
+						width={1920}
+						height={619}
+					/>
+				</div>
+			</section>
+			<Aberto className={pageSobre.aberto} />
 		</>
 	)
 }

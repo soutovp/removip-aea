@@ -2,7 +2,7 @@
 import Image from "next/image"
 import React, { useEffect, useState, useRef, useLayoutEffect } from "react"
 import Link from "next/link"
-// import '../styles/_header.sass'
+import headerStyle from '../styles/components/header.module.sass'
 export default function Header() {
 	const [mobile, setMobile] = useState(false)
 	const [colorChange, setColorChange] = useState('#791B28')
@@ -35,14 +35,14 @@ export default function Header() {
 	}
 	return (
 		<>
-			<button ref={hamburger} id={"hamburger"} onClick={openMenu}>
+			<button ref={hamburger} className={headerStyle.hamburger} onClick={openMenu}>
 				<svg width="32px" height="32px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M20 7L4 7" stroke={colorChange} strokeWidth="1.5" strokeLinecap="round" />
 					<path d="M20 12L4 12" stroke={colorChange} strokeWidth="1.5" strokeLinecap="round" />
 					<path d="M20 17L4 17" stroke={colorChange} strokeWidth="1.5" strokeLinecap="round" />
 				</svg>
 			</button>
-			<div id="menu" ref={menu} style={{ transform: showHide }}>
+			<div className={headerStyle.menu} ref={menu} style={{ transform: showHide }}>
 				<nav className="headerNav widthLimitation">
 					<div>
 						<Image

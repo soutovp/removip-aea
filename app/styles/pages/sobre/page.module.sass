@@ -1,38 +1,22 @@
+@import '../../layout'
 @import atendimento.module
 @import sessaoBanner.module
-@import '../../layout'
+@import sobre.module
 
-main
-	section.sobre
-		background-image: linear-gradient(to bottom, $primary ,$tertiary 30%)
-		padding: 100px 0
-		div.sobre-first-article
-			width: 50%
-			margin: auto
-			@include media-small
-				width: 90%
-			article
-				p
-					text-align: start
-			div.sobre-divider
-				height: 5px
-				width: 60%
-				background-color: $secondary
-				border-radius: 2.5px
-				margin: 50px 0
-			div.sobre-articles
-				display: grid
-				grid-template-areas: "visao valores" "missao missao"
-				gap: 50px
-				article
-					h2
-						text-align: start
-				article:nth-child(1)
-					grid-area: visao
-				article:nth-child(2)
-					grid-area: valores
-				article:nth-child(3)
-					grid-area: missao
-	div#aberto
-		background-image: url(/svg/padrao-fundo-2.svg)
-		background-color: $primary
+.aberto
+	background-image: url(/svg/padrao-fundo-2.svg)
+	background-color: $primary
+
+.video
+	background-color: $primary-medium
+	display: flex
+	justify-content: center
+	padding: 50px 0
+	img
+		max-width: 60%
+		max-height: 100%
+		border-radius: 50px
+		@include media-small
+			width: 90%
+			height: 250px
+			max-width: 90%

@@ -1,5 +1,5 @@
-@import layout
-button#hamburger
+@import ../layout
+.hamburger
 	position: fixed
 	backgound-color: $primary
 	border: none
@@ -9,7 +9,7 @@ button#hamburger
 	top: 5px
 	z-index: 999
 	margin: 15px
-div#menu
+.menu
 	display: block
 	position: fixed
 	background-color: $primary
@@ -24,7 +24,7 @@ div#menu
 		position: fixed
 		transform: translateX(-100%)
 		z-index: 998
-	nav.headerNav
+	> nav
 		display: flex
 		margin: auto
 		flex-direction: row
@@ -33,7 +33,7 @@ div#menu
 		@include media-small
 			flex-direction: column
 			height: 100%
-	ul.headerMenu
+	div:nth-child(2) ul
 		list-style: none
 		display: flex
 		flex-direction: row
@@ -47,7 +47,7 @@ div#menu
 		li
 			@include media-small
 				margin: 15px 0
-		li a
+		a
 			font-family: 'Quicksand'
 			color: $secondary
 			text-decoration: none
@@ -60,7 +60,7 @@ div#menu
 		font-weight: 600
 		&:hover
 			font-weight: normal
-	ul.headerRedes
+	div:last-child ul
 		list-style: none
 		display: flex
 		flex-direction: row
