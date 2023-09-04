@@ -1,47 +1,64 @@
 import Atendimento from '../components/Atendimento'
 import Banner from '../components/Banner'
 import Aberto from '../components/Aberto'
-import Souto from '../components/Souto'
-
+import servicosStyle from '../styles/pages/servicos/page.module.sass'
 export default function Page() {
+	const servicos = [
+		{
+			imagem: { img: 'servico_resgate-aeromedico', alt: 'Imagem de um helicoptero.' },
+			title: 'Transporte Aeromédico',
+			text: (<><p>Sistema de transporte aéro integrado com o terrestre.</p><p>Transferência intermunicipal, interestadual e internacional.</p></>)
+		},
+		{
+			imagem: { img: 'servico_remocao-ambulancia-particular', alt: 'Imagem de uma paramédica atrás de uma ambulância.' },
+			title: 'Remoção de Pacientes',
+			text: (<>
+				<p>Residência -&gt; Hospital</p>
+				<span>(internação/exame)</span>
+				<p>Hospital -&gt; Residência</p>
+				<span>(Alta hospitalar)</span>
+				<p>Residência -&gt; Clínica/consultório -&gt; Residência</p>
+				<span>(Exame)</span>
+			</>)
+		},
+		{
+			imagem: { img: 'servico_ambulancia-cobertura-medica', alt: 'Imagem de uma ambulância com três paramédicos na frente dela.' },
+			title: 'Cobertura médica de eventos',
+			text: (<><p>Cobertura médica e infraestrutura completa para qualquer evento, seja ele: esportivo, social, cultural, religioso ou corporativo.</p></>)
+		},
+		{
+			imagem: { img: 'servico_posto-medico-evento', alt: 'Imagem de uma sala de atendimento clínico.' },
+			title: 'Postos Médicos',
+			text: (<><p>Implantação e gestão de ambulatórios lacais. Segurança garantida onde for preciso</p></>)
+		},
+		{
+			imagem: { img: 'servico_locacao-aluguel-ambulancia', alt: 'Imagem de duas ambulâncias estacionadas.' },
+			title: 'Locação de Ambulâncias',
+			text: (<>
+				<p>Moderna frotas de ambulâncias.</p>
+				<p>Flexibilidade do período contratado.</p>
+			</>)
+		}
+	]
 	return (
 		<>
-			<Banner page={'servicos'} />
-			<Atendimento />
-			<Souto>Conheça algumas de nossas soluções</Souto>
-			<Souto>
-				{/* img */}
-				<Souto>TRANSPORTE AEROMÉDICO</Souto>
-				<Souto>Sistema de transporte aéreo integrado com o terrestre.</Souto>
-				<Souto>Transferência intermunicipal, interestadual e internacioal.</Souto>
-			</Souto>
-			<Souto>
-				{/* img */}
-				<Souto>REMOÇÃO DE PACIENTES</Souto>
-				<Souto>Residência -&gt; Hospital</Souto>
-				<Souto>(internação/exame)</Souto>
-				<Souto>Hospital -&gt; Residência</Souto>
-				<Souto>(Alta hospitalar)</Souto>
-				<Souto>Residência -&gt; Clínica/consultório -&gt; Residência</Souto>
-				<Souto>(Exame)</Souto>
-			</Souto>
-			<Souto>
-				{/* img */}
-				<Souto>COBERTURA MÉDICA DE EVENTOS</Souto>
-				<Souto>Cobertura médica e infraestrutura completa para qualquer evento, seja ele: esportivo, social, cultural, religioso ou corporativo.</Souto>
-			</Souto>
-			<Souto>
-				{/* img */}
-				<Souto>POSTOS MÉDICOS</Souto>
-				<Souto>Implantação e gestão de ambulatórios lacais. Segurança garantida onde for preciso</Souto>
-			</Souto>
-			<Souto>
-				{/* img */}
-				<Souto>LOCAÇÃO DE AMBULÂNCIAS</Souto>
-				<Souto>Moderna frotas de ambulâncias.</Souto>
-				<Souto>Flexibilidade do período contratado.</Souto>
-			</Souto>
-			<Aberto />
+			<Banner img={'cama'} alt={'Imagem de maca sendo removida de uma ambulância.'} />
+			<Atendimento className={servicosStyle.atendimento} />
+			<section className={servicosStyle.servicos}>
+				<h1>Conheça algumas de nossas soluções</h1>
+				<div>
+					{servicos.map(servico => {
+						return (<>
+							<article>
+								<img src={`/images/${servico.imagem.img}.png`} alt={servico.imagem.alt} />
+								<h2>{servico.title}</h2>
+								{servico.text}
+							</article>
+						</>)
+					})}
+				</div>
+			</section>
+			<Aberto className={servicosStyle.aberto} />
 		</>
 	)
 }

@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form"
 import { toast } from 'react-toastify';
 import React, { useState } from "react";
 
-export default function Formulario() {
+export default function Formulario({ className = null }) {
 	const {
 		handleSubmit,
 		register,
@@ -57,12 +57,10 @@ export default function Formulario() {
 	errors?.assunto && (toast.error(errors.assunto.message, { autoClose: 3000 }))
 
 	return (
-		<div>
-			<div>
-				<h2>
-					Contato
-				</h2>
-			</div>
+		<section className={className}>
+			<h2>
+				Contato
+			</h2>
 			<form
 				onSubmit={handleSubmit(onSubmit, onError)}
 			>
@@ -164,6 +162,6 @@ export default function Formulario() {
 					</button>
 				</div>
 			</form>
-		</div >
+		</section >
 	);
 }
