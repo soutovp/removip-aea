@@ -9,6 +9,12 @@ export default function Header() {
 		mobile: false,
 		showHide: 'translateX(0px)',
 	});
+	const updateMenuInfo = (novosValores) => {
+		setMenuInfo((prevMenuInfo) => ({
+			...prevMenuInfo,
+			...novosValores,
+		}));
+	};
 
 	const hamburger = useRef(null);
 	const menu = useRef(null);
@@ -21,6 +27,22 @@ export default function Header() {
 			}));
 		};
 
+
+		window.addEventListener('resize', handleResize);
+		handleResize(); // Estado inicial
+
+		return () => {
+			window.removeEventListener('resize', handleResize);
+		};
+	}, []);
+
+	useEffect(() => {
+		const handleResize = () => {
+			updateMenuInfo({
+				mobile: window.innerWidth <= 768,
+			});
+		};
+
 		window.addEventListener('resize', handleResize);
 		handleResize(); // Estado inicial
 
@@ -31,29 +53,26 @@ export default function Header() {
 
 	useEffect(() => {
 		if (!menuInfo.mobile) {
-			setMenuInfo((prevMenuInfo) => ({
-				...prevMenuInfo,
+			updateMenuInfo({
 				showHide: 'translateX(0px)',
-			}));
+			});
 			hamburger.current.style.display = 'none';
 		} else {
-			setMenuInfo((prevMenuInfo) => ({
-				...prevMenuInfo,
+			updateMenuInfo({
 				showHide: 'translateX(-100%)',
-			}));
+			});
 			hamburger.current.style.display = 'block';
 		}
 	}, [menuInfo.mobile]);
 
 	function openMenu() {
 		if (menuInfo.mobile) {
-			setMenuInfo((prevMenuInfo) => ({
-				...prevMenuInfo,
+			updateMenuInfo({
 				showHide:
-					prevMenuInfo.showHide === 'translateX(0px)'
+					menuInfo.showHide === 'translateX(0px)'
 						? 'translateX(-100%)'
 						: 'translateX(0px)',
-			}));
+			});
 		}
 	}
 
