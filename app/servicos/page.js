@@ -2,6 +2,9 @@ import Atendimento from '../components/Atendimento'
 import Banner from '../components/Banner'
 import Aberto from '../components/Aberto'
 import servicosStyle from '../styles/pages/servicos/page.module.sass'
+export const metadata = {
+	title: 'Removip - Serviços'
+}
 export default function Page() {
 	const servicos = [
 		{
