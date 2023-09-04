@@ -1,7 +1,7 @@
 @import ../layout
 .hamburger
 	position: fixed
-	backgound-color: $primary
+	background-color: $primary
 	border: none
 	border-radius: 5px
 	padding: 5px
@@ -33,34 +33,29 @@
 		@include media-small
 			flex-direction: column
 			height: 100%
-	div:nth-child(2) 
+	div:nth-child(2) ul
+		list-style: none
+		display: flex
+		flex-direction: row
+		gap: 15px
+		font-size: $font-primary
+		font-weight: 300
 		@include media-small
-			width: 100%
-		> ul
-			list-style: none
-			display: flex
-			flex-direction: row
-			gap: 15px
-			font-size: $font-primary
-			font-weight: 300
+			flex-direction: column
+			align-items: center
+			padding: 0
+			font-size: $font-medium
+		li
 			@include media-small
-				flex-direction: column
-				align-items: center
-				padding: 0
-				font-size: $font-medium
-			li
-				@include media-small
-					width: 100%
-			a
-				font-family: 'Quicksand'
-				color: $secondary
-				text-decoration: none
-				&:hover
-					font-weight: 600
-				@include media-small
-					display: block
-					padding: 15px
-					width: 100%
+				margin: 15px 0
+		a
+			font-family: 'Quicksand'
+			color: $secondary
+			text-decoration: none
+			&:hover
+				font-weight: 600
+			@include media-small
+				padding: 15px
 	.headerActiveLink
 		font-weight: 600
 		&:hover
