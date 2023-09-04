@@ -1,0 +1,31 @@
+@import ../../layout
+.servicos
+	padding: 0 0 100px 0
+	h1
+		font-size: $font-large
+		margin-bottom: 50px
+		@include media-small
+			font-size: $font-medium
+	> div
+		display: grid
+		grid: auto / auto auto
+		gap: 25px
+		margin: auto
+		justify-content: center
+		@include media-small
+			grid: 400px / auto
+		> article
+			width: 350px
+			p
+				margin: 0
+				padding-top: 15px
+			span
+				font-size: $font-small
+			img
+				width: 100%
+				border-radius: 25px
+			&:last-child
+				transform: translateX(50%)
+			@include media-small
+				&:last-child
+					transform: translateX(0)

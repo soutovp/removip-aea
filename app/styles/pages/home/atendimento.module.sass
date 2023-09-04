@@ -1,5 +1,31 @@
+// .atendimento
+// 	@include media-small
+// 		top: 0
+
 .atendimento
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	gap: 25px
 	position: relative
-	top: 100px
+	width: 100%
 	@include media-small
-		top: 0
+		flex-direction: column
+	button
+		padding: 20px 25px
+		font-family: 'Quicksand'
+		font-weight: 400
+		font-size: $font-medium
+		border: none
+		background: $secondary
+		border-radius: 10px
+		color: $primary
+		&:hover
+			cursor: pointer
+		strong
+			font-weight: 700
+		@include media-small
+			font-size: $font-primary
+		@include media-medium
+			font-size: $font-primary
