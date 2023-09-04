@@ -7,7 +7,6 @@ export const metadata = {
 	title: 'Removip - Serviços'
 }
 export default function Page() {
-
 	return (
 		<>
 			<Banner img={'cama'} alt={'Imagem de maca sendo removida de uma ambulância.'} />
@@ -19,7 +18,11 @@ export default function Page() {
 						<article key={servico.title}>
 							<img src={`/images/${servico.imagem.img}.png`} alt={servico.imagem.alt} />
 							<h2>{servico.title}</h2>
-							<div dangerouslySetInnerHTML={{ __html: servico.text }} />
+							<div>
+								{servico.text.map((paragrafo) => (
+									<p>{paragrafo}</p>
+								))}
+							</div>
 						</article>
 					))}
 				</div>

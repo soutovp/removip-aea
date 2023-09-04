@@ -1,42 +1,59 @@
 [
-	{
-		"imagem": {
-			"img": "servico_resgate-aeromedico",
-			"alt": "Imagem de um helicóptero."
-		},
-		"title": "Transporte Aeromédico",
-		"text": "<p>Sistema de transporte aéreo integrado com o terrestre.</p><p>Transferência intermunicipal, interestadual e internacional.</p>"
-	},
-	{
-		"imagem": {
-			"img": "servico_remocao-ambulancia-particular",
-			"alt": "Imagem de uma paramédica atrás de uma ambulância."
-		},
-		"title": "Remoção de Pacientes",
-		"text": "<p>Residência -&gt; Hospital</p><span>(internação/exame)</span><p>Hospital -&gt; Residência</p><span>(Alta hospitalar)</span><p>Residência -&gt; Clínica/consultório -&gt; Residência</p><span>(Exame)</span>"
-	},
-	{
-		"imagem": {
-			"img": "servico_ambulancia-cobertura-medica",
-			"alt": "Imagem de uma ambulância com três paramédicos na frente dela."
-		},
-		"title": "Cobertura médica de eventos",
-		"text": "<p>Cobertura médica e infraestrutura completa para qualquer evento, seja ele: esportivo, social, cultural, religioso ou corporativo.</p>"
-	},
-	{
-		"imagem": {
-			"img": "servico_posto-medico-evento",
-			"alt": "Imagem de uma sala de atendimento clínico."
-		},
-		"title": "Postos Médicos",
-		"text": "<p>Implantação e gestão de ambulatórios locais. Segurança garantida onde for preciso.</p>"
-	},
-	{
-		"imagem": {
-			"img": "servico_locacao-aluguel-ambulancia",
-			"alt": "Imagem de duas ambulâncias estacionadas."
-		},
-		"title": "Locação de Ambulâncias",
-		"text": "<p>Modernas frotas de ambulâncias.</p><p>Flexibilidade do período contratado.</p>"
-	}
+  {
+    "imagem": {
+      "img": "servico_resgate-aeromedico",
+      "alt": "Imagem de um helicóptero."
+    },
+    "title": "Transporte Aeromédico",
+    "text": [
+      "Sistema de transporte aéreo integrado com o terrestre.",
+      "Transferência intermunicipal, interestadual e internacional."
+    ]
+  },
+  {
+    "imagem": {
+      "img": "servico_remocao-ambulancia-particular",
+      "alt": "Imagem de uma paramédica atrás de uma ambulância."
+    },
+    "title": "Remoção de Pacientes",
+    "text": [
+      "Residência -> Hospital",
+      "(internação/exame)",
+      "Hospital -> Residência",
+      "(Alta hospitalar)",
+      "Residência -> Clínica/consultório -> Residência",
+      "(Exame)"
+    ]
+  },
+  {
+    "imagem": {
+      "img": "servico_ambulancia-cobertura-medica",
+      "alt": "Imagem de uma ambulância com três paramédicos na frente dela."
+    },
+    "title": "Cobertura médica de eventos",
+    "text": [
+      "Cobertura médica e infraestrutura completa para qualquer evento, seja ele: esportivo, social, cultural, religioso ou corporativo."
+    ]
+  },
+  {
+    "imagem": {
+      "img": "servico_posto-medico-evento",
+      "alt": "Imagem de uma sala de atendimento clínico."
+    },
+    "title": "Postos Médicos",
+    "text": [
+      "Implantação e gestão de ambulatórios locais. Segurança garantida onde for preciso."
+    ]
+  },
+  {
+    "imagem": {
+      "img": "servico_locacao-aluguel-ambulancia",
+      "alt": "Imagem de duas ambulâncias estacionadas."
+    },
+    "title": "Locação de Ambulâncias",
+    "text": [
+      "Modernas frotas de ambulâncias.",
+      "Flexibilidade do período contratado."
+    ]
+  }
 ]
