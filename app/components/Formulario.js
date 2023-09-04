@@ -2,6 +2,7 @@
 // import { NextResponse } from "next/server";
 import { useForm } from "react-hook-form"
 import { toast } from 'react-toastify';
+import React, { useState } from "react";
 
 export default function Formulario({ className = null }) {
 	const {
@@ -21,10 +22,11 @@ export default function Formulario({ className = null }) {
 	});
 
 	// const onSubmit = (data) => console.log('data');
+	const [botaoDesativado, setDesativarBotao] = useState(false);
 
 	const onSubmit = async (data) => {
 		const waitNotificationId = toast.info('Aguarde...');
-
+		setDesativarBotao(true);
 		try {
 			const response = await fetch('/api/contato', {
 				method: 'POST',
@@ -33,13 +35,12 @@ export default function Formulario({ className = null }) {
 				},
 				body: JSON.stringify(data)
 			});
-
-			// console.log('Resposta recebida');
 			const { message, status } = await response.json();
 			toast.update(waitNotificationId, {
 				render: message,
 				type: status === 200 ? toast.TYPE.SUCCESS : toast.TYPE.ERROR,
 			});
+			setDesativarBotao(false)
 		} catch (error) {
 			// console.error('Erro ao fazer a solicitação:', error);
 			toast.error('Erro ao enviar a mensagem');
@@ -155,6 +156,7 @@ export default function Formulario({ className = null }) {
 				<div>
 					<button
 						type="submit"
+						disabled={botaoDesativado}
 					>
 						Enviar
 					</button>
