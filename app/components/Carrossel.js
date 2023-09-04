@@ -2,6 +2,7 @@
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import Image from 'next/image'
 import '@splidejs/react-splide/css/core';
+import carrosselData from './carrossel.json'
 
 export default function Carrossel() {
 	return (
@@ -16,26 +17,12 @@ export default function Carrossel() {
 				}}
 			>
 				<SplideTrack>
-					<SplideSlide>
-						<Image src={'/images/servico_resgate-aeromedico.jpg'} width={600} height={300} alt="Resgate aeromédico" />
-						<h3>Resgate Aeromédico</h3>
-					</SplideSlide>
-					<SplideSlide>
-						<Image src={'/images/servico_remocao-ambulancia-particular.jpg'} width={600} height={300} alt="Remoção de pacientes" />
-						<h3>Remoção de pacientes</h3>
-					</SplideSlide>
-					<SplideSlide>
-						<Image src={'/images/servico_ambulancia-cobertura-medica.jpg'} width={600} height={300} alt="Cobertura médica de eventos" />
-						<h3>Cobertura médica de eventos</h3>
-					</SplideSlide>
-					<SplideSlide>
-						<Image src={'/images/servico_posto-medico-evento.jpg'} width={600} height={300} alt="Postos médicos" />
-						<h3>Postos médicos</h3>
-					</SplideSlide>
-					<SplideSlide>
-						<Image src={'/images/servico_locacao-aluguel-ambulancia.jpg'} width={600} height={300} alt="Locação de ambulâncias" />
-						<h3>Locação de ambulâncias</h3>
-					</SplideSlide>
+					{carrosselData.map(({ imageSrc, altText, title }, index) => (
+						<SplideSlide key={index}>
+							<Image src={imageSrc} width={600} height={300} alt={altText} />
+							<h3>{title}</h3>
+						</SplideSlide>
+					))}
 				</SplideTrack>
 				<div className="splide__progress">
 					<div className="splide__progress__bar" />

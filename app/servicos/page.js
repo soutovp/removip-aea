@@ -14,13 +14,13 @@ export default function Page() {
 			<section className={servicosStyle.servicos}>
 				<h1>Conheça algumas de nossas soluções</h1>
 				<div>
-					{servicos.map((servico) => (
-						<article key={servico.title}>
-							<img src={`/images/${servico.imagem.img}.png`} alt={servico.imagem.alt} />
-							<h2>{servico.title}</h2>
+					{servicos.map(({ imagem, title, text }, index) => (
+						<article key={index}>
+							<img src={`/images/${imagem.img}.png`} alt={imagem.alt} />
+							<h2>{title}</h2>
 							<div>
-								{servico.text.map((paragrafo) => (
-									<p>{paragrafo}</p>
+								{text.map((paragrafo, index) => (
+									<p key={index}>{paragrafo}</p>
 								))}
 							</div>
 						</article>
