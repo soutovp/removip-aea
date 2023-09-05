@@ -19,19 +19,15 @@ export async function POST(req) {
 		from: emailUser,
 		to: emailUser,
 		subject: `Contato | ${assunto}`,
-		html: `<h1 style="background-color: red; color: white;">Hello World</h1>
-			<p>${nome}</p>
-			<p>${email}</p>
-			<p>Mensagem</p>
-			<p>${mensagem}</p>
+		html: `
+			<h1 style="padding: 10px; color: #EBEAEA; background-color: #9E2537; margin: 0">Contato</h1>
+			<div style="background-color: #58141D; color: #EBEAEA; padding: 10px">
+				<p>Nome: <strong>${nome}</strong></p>
+				<p>Email: <strong>${email}</strong></p>
+				<p>Telefone: <strong>${telefone}</strong></p>
+				<p style="text-align: justify">Mensagem: <strong>${mensagem}</strong></p>
+			</div>
 		`
-		//     text: `
-		//     Nome: ${nome}
-		//     Telefone: ${telefone}
-		//     Email: ${email}
-		//     Mensagem:
-		//     ${mensagem}
-		//     `,
 	};
 
 	try {
