@@ -18,11 +18,13 @@
 		@include media-small
 			width: 90%
 		> div
-			padding: 10px
+			> div
+				padding: 10px
 			label
 				display: block
 				text-align: start
 				padding: 15px 0
+				// color: transparent
 				display: none
 			input, textarea
 				font-family: 'Quicksand'
@@ -38,6 +40,10 @@
 					color: white
 					font-weight: 400
 					opacity: 1
+				&:focus
+					outline-color: $secondary
+					outline-width: 2px
+					outline-style: solid
 			textarea
 				min-height: 200px
 				min-width: 100%
@@ -52,23 +58,23 @@
 				font-weight: 500
 				@include media-small
 					width: 100%
-		div:last-child
+		div:nth-child(6)
 			display: flex
 			justify-content: space-between
 			font-size: $font-primary
 			> div:first-child
-				display: flex
-				flex-direction: column
-				align-items: flex-start
 				> div
 					display: flex
-					flex-direction: row
-					align-items: center
+					flex-direction: column
+					align-items: flex-start
+					> div
+						display: flex
+						flex-direction: row
+						align-items: center
+						> p
+							margin-left: 10px
 					> p
-						margin-left: 10px
-				> p
-					text-align: start
-
+						text-align: start
 			> div:last-child
 				display: flex
 				flex-direction: column
