@@ -1,7 +1,7 @@
 'use client';
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function Formulario({ className = null }) {
 	const {
@@ -53,81 +53,95 @@ export default function Formulario({ className = null }) {
 			});
 		}
 	};
-
 	const handleBlur = (campo) => {
-		if (errors[campo]) {
-			toast.error(errors[campo]?.message, { autoClose: 3000 });
+		const fieldError = errors[campo]
+		if (fieldError) {
+			toast.error(fieldError?.message, { autoClose: 3000 });
 		}
 	};
-
+	useEffect(() => onError, [errors])
 	return (
 		<section className={className}>
 			<h2>Contato</h2>
 			<form onSubmit={handleSubmit(onSubmit, onError)}>
 				<div>
-					<label htmlFor="nome">Nome</label>
-					<input
-						{...register('nome', {
-							required: 'Nome é requerido.',
-						})}
-						type="text"
-						name="nome"
-						autoComplete="nome"
-						onBlur={() => handleBlur('nome')}
-						placeholder='Nome'
-					/>
-				</div>
-				<div>
-					<label htmlFor="telefone">Telefone</label>
-					<input
-						{...register('telefone', {
-							required: 'Telefone é requerido.',
-						})}
-						type="tel"
-						name="telefone"
-						autoComplete="(99)9?9999-9999"
-						onBlur={() => handleBlur('telefone')}
-						placeholder='Telefone'
-					/>
-				</div>
-				<div>
-					<label htmlFor="email">Email</label>
-					<input
-						{...register('email', {
-							required: 'Email é requerido.',
-							pattern: {
-								value: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
-								message: 'Email inválido',
-							},
-						})}
-						type="email"
-						name="email"
-						autoComplete="email"
-						onBlur={() => handleBlur('email')}
-						placeholder='E-mail'
-					/>
-				</div>
-				<div>
-					<label htmlFor="assunto">Assunto</label>
-					<input {...register('assunto')} type="text" name="assunto" autoComplete="assunto" placeholder='Assunto' />
-				</div>
-				<div>
-					<label htmlFor="mensagem">Mensagem</label>
-					<textarea {...register('mensagem')} name="mensagem" rows={4} placeholder='Mensagem' />
-				</div>
-				<div>
 					<div>
+						<label htmlFor="nome">Nome</label>
 						<div>
-							<img src="/svg/instagram.svg" alt="Ícone de Instagram da @REMOVIP_" />
-							<p>@REMOVIP_</p>
+							<input
+								{...register('nome', {
+									required: 'Nome é requerido.',
+								})}
+								type="text"
+								name="nome"
+								autoComplete="nome"
+								onBlur={() => handleBlur('nome')}
+								placeholder='Nome'
+							/>
 						</div>
-						<p>(21) 3148-4158<br />removip@removip.com.br</p>
 					</div>
 					<div>
-						<button type="submit" disabled={botaoDesativado}>
-							Enviar!
-						</button>
-						<p>Rua joao Tarquato, 248 Bonsucesso<br />Rio de Janeiro - RJ | CEP 21032-150</p>
+						<label htmlFor="telefone">Telefone</label>
+						<div>
+							<input
+								{...register('telefone', {
+									required: 'Telefone é requerido.',
+								})}
+								type="tel"
+								name="telefone"
+								autoComplete="(99)9?9999-9999"
+								onBlur={() => handleBlur('telefone')}
+								placeholder='Telefone'
+							/>
+						</div>
+					</div>
+					<div>
+						<label htmlFor="email">Email</label>
+						<div>
+							<input
+								{...register('email', {
+									required: 'Email é requerido.',
+									pattern: {
+										value: /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/,
+										message: 'Email inválido',
+									},
+								})}
+								type="email"
+								name="email"
+								autoComplete="email"
+								onBlur={() => handleBlur('email')}
+								placeholder='E-mail'
+							/>
+						</div>
+					</div>
+					<div>
+						<label htmlFor="assunto">Assunto</label>
+						<div>
+							<input {...register('assunto')} type="text" name="assunto" autoComplete="assunto" placeholder='Assunto' />
+						</div>
+					</div>
+					<div>
+						<label htmlFor="mensagem">Mensagem</label>
+						<div>
+							<textarea {...register('mensagem')} name="mensagem" rows={4} placeholder='Mensagem' />
+						</div>
+					</div>
+					<div>
+						<div>
+							<div>
+								<div>
+									<img src="/svg/instagram.svg" alt="Ícone de Instagram da @REMOVIP_" />
+									<p>@REMOVIP_</p>
+								</div>
+								<p>(21) 3148-4158<br />removip@removip.com.br</p>
+							</div>
+						</div>
+						<div>
+							<button type="submit" disabled={botaoDesativado}>
+								Enviar!
+							</button>
+							<p>Rua joao Tarquato, 248 Bonsucesso<br />Rio de Janeiro - RJ | CEP 21032-150</p>
+						</div>
 					</div>
 				</div>
 			</form>
