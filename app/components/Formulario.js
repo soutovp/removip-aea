@@ -49,8 +49,8 @@ export default function Formulario({ className = null }) {
 	const onError = (errors) => {
 		if (errors) {
 			Object.keys(errors).forEach((key) => {
-				toast.error(errors[key]?.message, { autoClose: 3000 });
-			});
+				toast.error(errors[key]?.message, { autoClose: 3000 })
+			})
 		}
 	};
 
