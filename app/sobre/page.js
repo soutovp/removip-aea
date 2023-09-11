@@ -5,7 +5,8 @@ import Head from 'next/head'
 import Atendimento from '../components/Atendimento'
 import Image from 'next/image'
 export const metadata = {
-	title: 'Removip - Sobre'
+	title: 'Removip - Sobre',
+	description: 'Removip é uma empresa especializada em locação de ambulâncias, remoção de pacientes e cobertura médica de eventos. Nossa frota de ambulâncias é totalmente equipada com o que há de mais moderno e funcional para atendimento em unidades móveis e nossa equipe é formada por profissionais com extensa experiência e profundo treinamento nesse mercado.'
 }
 export default function Page() {
 	return (

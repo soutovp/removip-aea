@@ -4,7 +4,8 @@ import Aberto from '../components/Aberto'
 import servicosStyle from '../styles/pages/servicos/page.module.sass'
 import servicos from './servicos.json'
 export const metadata = {
-	title: 'Removip - Serviços'
+	title: 'Removip - Serviços',
+	description: 'Possuimos alguns serviços como: Transporte Aeromédico, Remoção de Pacientes, Cobertura médica de eventos, Postos Médicos e Lacação de Ambulâncias.'
 }
 export default function Page() {
 	return (
