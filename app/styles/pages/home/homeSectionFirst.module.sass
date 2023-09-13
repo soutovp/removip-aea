@@ -1,3 +1,4 @@
+@import ../../layout
 .homeSectionFirst
 	background-color: $secondary
 	color: $primary
@@ -12,7 +13,10 @@
 		grid-template-columns: auto auto
 		grid-gap: 50px
 		margin: auto
-		padding: 0
+		padding: 100px 0
+		font-size: 20px
+		h2
+			font-size: $font-medium
 		@include media-small
 			grid-template-columns: auto
 			width: 90%

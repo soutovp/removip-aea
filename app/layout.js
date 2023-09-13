@@ -6,7 +6,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata = {
 	title: 'Removip - Home',
-	description: 'Serviço de ambulância particular para atendimentos, remoções, altas e exames emergenciais.'
+	description: 'Serviço de ambulância particular para atendimentos, remoções, altas e exames emergenciais.',
+	keywords: ''
 }
 
 export default function RootLayout({ children }) {

@@ -23,8 +23,8 @@ export default function Home() {
 						<div>
 							<Image
 								src={'/svg/coracao.svg'}
-								width={50}
-								height={50}
+								width={75}
+								height={75}
 								alt={'Icone de coração'}
 							/>
 							<h2>Especialidades</h2>
@@ -35,8 +35,8 @@ export default function Home() {
 						<div>
 							<Image
 								src={'/svg/ambulancia-escura.svg'}
-								width={50}
-								height={50}
+								width={75}
+								height={75}
 								alt={'Icone de coração'}
 							/>
 							<h2>A Frota</h2>
@@ -47,8 +47,8 @@ export default function Home() {
 						<div>
 							<Image
 								src={'/svg/cruz-contorno.svg'}
-								width={50}
-								height={50}
+								width={75}
+								height={75}
 								alt={'Icone de coração'}
 							/>
 							<h2>Credeinciamento</h2>
@@ -59,8 +59,8 @@ export default function Home() {
 						<div>
 							<Image
 								src={'/svg/atendente-ambulancia.svg'}
-								width={50}
-								height={50}
+								width={75}
+								height={75}
 								alt={'Icone de coração'}
 							/>
 							<h2>A Equipe</h2>

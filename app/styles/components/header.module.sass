@@ -30,10 +30,14 @@
 		flex-direction: row
 		align-items: center
 		justify-content: space-around
+		img
+			max-width: 150px
+			@include media-small
+				max-width: 250px
 		@include media-small
 			flex-direction: column
 			height: 100%
-	div:nth-child(2) 
+	div:nth-child(2)
 		@include media-small
 			width: 100%
 		ul

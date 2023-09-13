@@ -117,12 +117,7 @@ export default function Header() {
 			>
 				<nav className="headerNav widthLimitation">
 					<div>
-						<Image
-							src={'/svg/removip-logo-header.svg'}
-							width={120}
-							height={50}
-							alt="Logo Removip"
-						/>
+						<img src="/images/removiplogo.png" alt="Logo da Removip" />
 					</div>
 					<div>
 						<ul>

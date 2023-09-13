@@ -5,12 +5,7 @@ export default function Footer() {
 		<footer className={footer.footer}>
 			<div>
 				<aside>
-					<Image
-						src={'/svg/logo-removip-icone.svg'}
-						width={200}
-						height={50}
-						alt="Logo Removip"
-					/>
+					<img src="/images/removiplogo.png" alt="Logo da Removip" />
 					<p>A removip é uma empresa especializada em locação de ambulâcias, remoção de pacientes e cobertura médica de eventos</p>
 				</aside>
 				<hr />

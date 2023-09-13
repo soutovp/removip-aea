@@ -36,7 +36,7 @@ export default function Page() {
 							<header>
 								<h2>Valores</h2>
 							</header>
-							<p>Atender e servir com respeito, empatia e excelência, em rpol do bem maior que é a vida humana.</p>
+							<p>Atender e servir com respeito, empatia e excelência, em prol do bem maior que é a vida humana.</p>
 						</article>
 						<article>
 							<header>
