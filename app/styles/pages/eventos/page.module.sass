@@ -1,0 +1,72 @@
+@import '../../layout'
+@import './atendimento.module'
+@import './carrossel.module'
+@import './formulario.module'
+
+.aberto
+	background-image: url(/svg/padrao-fundo-2.svg)
+	background-color: $primary
+
+.mainSection
+	background-color: $primary
+	h2
+		width: 60%
+		font-size: $font-xlarge
+		margin: 100px auto 0 auto
+		font-weight: 400
+		position: relative
+		top: -75px
+		@include media-small
+			font-size: $font-medium
+	a > button
+		padding: 20px 25px
+		margin: 70px 0
+		font-family: 'Quicksand'
+		font-weight: 400
+		font-size: $font-primary
+		border: none
+		background: $secondary
+		border-radius: 10px
+		color: $primary
+		&:hover
+			cursor: pointer
+		strong
+			font-weight: 700
+		@include media-small
+			font-size: $font-primary
+		@include media-medium
+			font-size: $font-primary
+
+.articleFirst
+	font-size: $font-medium
+	padding: 100px 0
+	background-color: black
+	@include media-small
+		font-size: $font-primary
+	p
+		width: 60%
+		margin: auto
+		@include media-small
+			width: 80%
+			text-align: justify
+
+.sectionInside
+	display: flex
+	flex-direction: row
+	align-items: start
+	justify-content: center
+	gap: 25px
+	width: 60%
+	margin: auto
+	font-weight: 500
+	@include media-small
+		flex-direction: column
+	strong
+		font-weight: 400
+	article
+		width: 50%
+		text-align: start
+		@include media-small
+			width: 100%
+		p
+			margin: 0 0 25px 0

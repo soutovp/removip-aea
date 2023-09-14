@@ -1,0 +1,76 @@
+.formulario
+	padding-bottom: 150px
+	@include media-small
+		padding-bottom: 50px
+	> h2
+		font-size: $font-large
+		margin: 25px 0
+	> form
+		width: 40%
+		margin: auto
+		@include media-small
+			width: 90%
+		> div
+			> div
+				padding: 10px
+			label
+				display: block
+				text-align: start
+				padding: 15px 0
+				// color: transparent
+				display: none
+			input, textarea
+				font-family: 'Quicksand'
+				padding: 15px
+				width: 100%
+				max-width: 100%
+				border: none
+				border-radius: 10px
+				background-color: $primary-extra-dark
+				color: $secondary
+				font-weight: 600
+				&::placeholder
+					color: white
+					font-weight: 400
+					opacity: 1
+				&:focus
+					outline-color: $secondary
+					outline-width: 2px
+					outline-style: solid
+			textarea
+				min-height: 200px
+				min-width: 100%
+			button
+				padding: 15px
+				background-color: $secondary
+				font-family: 'Quicksand'
+				border: none
+				width: 200px
+				border-radius: 10px
+				color: $primary
+				font-weight: 500
+				@include media-small
+					width: 100%
+		div:nth-child(6)
+			display: flex
+			justify-content: space-between
+			font-size: $font-primary
+			> div:first-child
+				> div
+					display: flex
+					flex-direction: column
+					align-items: flex-start
+					> div
+						display: flex
+						flex-direction: row
+						align-items: center
+						> p
+							margin-left: 10px
+					> p
+						text-align: start
+			> div:last-child
+				display: flex
+				flex-direction: column
+				align-items: flex-end
+				> p
+					text-align: end
