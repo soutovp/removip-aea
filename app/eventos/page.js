@@ -4,6 +4,9 @@ import pageEventos from '../styles/pages/eventos/page.module.sass'
 import Carrossel from "../components/Carrossel"
 import Formulario from "../components/Formulario"
 import Aberto from "../components/Aberto"
+export const metadata = {
+	title: 'Removip - Eventos'
+}
 export default function Eventos() {
 	return (
 		<>

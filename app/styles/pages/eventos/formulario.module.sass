@@ -1,3 +1,4 @@
+@import ../../layout
 .formulario
 	padding-bottom: 150px
 	@include media-small
@@ -29,6 +30,8 @@
 				background-color: $primary-extra-dark
 				color: $secondary
 				font-weight: 600
+				@include media-xlarge
+					font-size: 1.2rem
 				&::placeholder
 					color: white
 					font-weight: 400
@@ -51,6 +54,8 @@
 				font-weight: 500
 				@include media-small
 					width: 100%
+				@include media-xlarge
+					font-size: 1.2rem
 		div:nth-child(6)
 			display: flex
 			justify-content: space-between

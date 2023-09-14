@@ -16,6 +16,9 @@
 		font-weight: 400
 		position: relative
 		top: -75px
+		@include media-xlarge
+			top: -90px
+			font-size: 3.5rem
 		@include media-small
 			font-size: $font-medium
 	a > button
@@ -32,10 +35,8 @@
 			cursor: pointer
 		strong
 			font-weight: 700
-		@include media-small
-			font-size: $font-primary
-		@include media-medium
-			font-size: $font-primary
+		@include media-xlarge
+			font-size: 1.2rem
 
 .articleFirst
 	font-size: $font-medium
@@ -43,6 +44,8 @@
 	background-color: black
 	@include media-small
 		font-size: $font-primary
+	@include media-xlarge
+		font-size: 1.7rem
 	p
 		width: 60%
 		margin: auto
@@ -68,5 +71,7 @@
 		text-align: start
 		@include media-small
 			width: 100%
+		@include media-xlarge
+			font-size: 1.2rem
 		p
 			margin: 0 0 25px 0

@@ -34,6 +34,8 @@
 			max-width: 150px
 			@include media-small
 				max-width: 250px
+			@include media-xlarge
+				max-width: 200px
 		@include media-small
 			flex-direction: column
 			height: 100%
@@ -47,6 +49,8 @@
 			gap: 15px
 			font-size: $font-primary
 			font-weight: 300
+			@include media-xlarge
+				font-size: 1.3rem
 			@include media-small
 				flex-direction: column
 				align-items: center
@@ -77,3 +81,7 @@
 		gap: 50px
 		@include media-small
 			padding: 0
+		a img
+			@include media-xlarge
+				width: 36px
+				height: 36px
