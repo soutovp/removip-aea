@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import { useForm } from 'react-hook-form';
 import { toast } from 'react-toastify';
 import React, { useEffect, useState } from 'react';
@@ -49,17 +49,27 @@ export default function Formulario({ className = null }) {
 	const onError = (errors) => {
 		if (errors) {
 			Object.keys(errors).forEach((key) => {
-				toast.error(errors[key]?.message, { autoClose: 3000 })
-			})
+				toast.error(errors[key]?.message, { autoClose: 3000 });
+			});
 		}
 	};
+
 	const handleBlur = (campo) => {
-		const fieldError = errors[campo]
-		if (fieldError) {
-			toast.error(fieldError?.message, { autoClose: 3000 });
+		if (errors[campo]) {
+			toast.error(errors[campo]?.message, { autoClose: 3000 });
 		}
 	};
-	useEffect(() => onError, [errors])
+
+	useEffect(() => {
+		const campos = ['nome', 'telefone', 'email'];
+
+		campos.forEach((campo) => {
+			document.querySelector(`[name="${campo}"]`).addEventListener('blur', () => {
+				handleBlur(campo);
+			});
+		});
+	}, [errors]);
+
 	return (
 		<section className={className}>
 			<h2>Contato</h2>
@@ -75,8 +85,7 @@ export default function Formulario({ className = null }) {
 								type="text"
 								name="nome"
 								autoComplete="nome"
-								onBlur={() => handleBlur('nome')}
-								placeholder='Nome'
+								placeholder="Nome"
 							/>
 						</div>
 					</div>
@@ -90,8 +99,7 @@ export default function Formulario({ className = null }) {
 								type="tel"
 								name="telefone"
 								autoComplete="(99)9?9999-9999"
-								onBlur={() => handleBlur('telefone')}
-								placeholder='Telefone'
+								placeholder="Telefone"
 							/>
 						</div>
 					</div>
@@ -109,28 +117,41 @@ export default function Formulario({ className = null }) {
 								type="email"
 								name="email"
 								autoComplete="email"
-								onBlur={() => handleBlur('email')}
-								placeholder='E-mail'
+								placeholder="E-mail"
 							/>
 						</div>
 					</div>
 					<div>
 						<label htmlFor="assunto">Assunto</label>
 						<div>
-							<input {...register('assunto')} type="text" name="assunto" autoComplete="assunto" placeholder='Assunto' />
+							<input
+								{...register('assunto')}
+								type="text"
+								name="assunto"
+								autoComplete="assunto"
+								placeholder="Assunto"
+							/>
 						</div>
 					</div>
 					<div>
 						<label htmlFor="mensagem">Mensagem</label>
 						<div>
-							<textarea {...register('mensagem')} name="mensagem" rows={4} placeholder='Mensagem' />
+							<textarea
+								{...register('mensagem')}
+								name="mensagem"
+								rows={4}
+								placeholder="Mensagem"
+							/>
 						</div>
 					</div>
 					<div>
 						<div>
 							<div>
 								<div>
-									<img src="/svg/instagram.svg" alt="Ícone de Instagram da @REMOVIP_" />
+									<img
+										src="/svg/instagram.svg"
+										alt="Ícone de Instagram da @REMOVIP_"
+									/>
 									<p>@REMOVIP_</p>
 								</div>
 								<p>(21) 3148-4158<br />removip@removip.com.br</p>
@@ -140,7 +161,10 @@ export default function Formulario({ className = null }) {
 							<button type="submit" disabled={botaoDesativado}>
 								Enviar!
 							</button>
-							<p>Rua joao Tarquato, 248 Bonsucesso<br />Rio de Janeiro - RJ | CEP 21032-150</p>
+							<p>
+								Rua joao Tarquato, 248 Bonsucesso<br />Rio de Janeiro - RJ | CEP
+								21032-150
+							</p>
 						</div>
 					</div>
 				</div>
