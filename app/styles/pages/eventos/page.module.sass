@@ -9,6 +9,12 @@
 
 .mainSection
 	background-color: $primary
+	position: relative
+	> div
+		width: 100%
+		height: 200px
+		position: absolute
+		background-image: linear-gradient($primary-extra-light, $primary)
 	h2
 		width: 60%
 		font-size: $font-xlarge
@@ -39,14 +45,28 @@
 			font-size: 1.2rem
 
 .articleFirst
+	background-image: url('/images/ambulancia-em-evento-estacionada.png')
+	background-size: cover
 	font-size: $font-medium
-	padding: 100px 0
-	background-color: black
+	position: relative
+	height: 400px
+	display: flex
+	align-content: center
 	@include media-small
-		font-size: $font-primary
+		background-size: cover
+		background-position: top center
+	> div
+		background-color: rgb(121, 27, 40, .8)
+		filter: grayscale(0)
+		width: 100%
+		height: 100%
+		position: absolute
+	@include media-small
+		font-size: 1.2rem
 	@include media-xlarge
 		font-size: 1.7rem
 	p
+		z-index: 100
 		width: 60%
 		margin: auto
 		@include media-small
@@ -62,6 +82,8 @@
 	width: 60%
 	margin: auto
 	font-weight: 500
+	> img
+		width: 200px
 	@include media-small
 		flex-direction: column
 	strong
