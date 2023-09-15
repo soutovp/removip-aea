@@ -22,13 +22,15 @@ export default function Footer() {
 				</aside>
 			</div>
 			<div>
-				<p>desenvolvido por <strong>a&a agência criativa</strong></p>
-				<span><Image
-					src={'/svg/logo-a-e-a.svg'}
-					width={30}
-					height={30}
-					alt="Logo da agência A&A"
-				/></span>
+				<p>desenvolvido por <strong><a href="https://aeaagencia.com/" target='_blank'>a&a agência criativa</a></strong></p>
+				<a href="https://aeaagencia.com/" target='_blank'>
+					<span><Image
+						src={'/svg/logo-a-e-a.svg'}
+						width={30}
+						height={30}
+						alt="Logo da agência A&A"
+					/></span>
+				</a>
 			</div>
 		</footer>
 	)

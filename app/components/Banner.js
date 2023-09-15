@@ -1,4 +1,3 @@
-import Image from "next/image"
 import bannerStyle from '../styles/components/banner.module.sass'
 export default function Banner({ className = null, alt, img }) {
 	return (
@@ -12,10 +11,9 @@ export default function Banner({ className = null, alt, img }) {
 							alt={alt}
 						/>
 					</div>
-					{/* <div></div> */}
 				</header>
 				<div>
-					<Image
+					<img
 						src={'/svg/frase-efeito-removip.svg'}
 						alt={'Sua tranquilidade em boas mãos.'}
 						width={781}

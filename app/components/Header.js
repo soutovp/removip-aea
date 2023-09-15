@@ -151,7 +151,7 @@ export default function Header() {
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<Image
+									<img
 										src={'/svg/instagram.svg'}
 										width={32}
 										height={32}
@@ -165,7 +165,7 @@ export default function Header() {
 									target="_blank"
 									rel="noopener noreferrer"
 								>
-									<Image
+									<img
 										src={'/svg/whatsapp.svg'}
 										width={32}
 										height={32}
