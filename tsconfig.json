@@ -29,8 +29,7 @@
     "**/*.ts",
     "**/*.tsx",
     "**/*.js",
-    "app/layout.js",
-    "nome_da_pasta_personalizada/types/**/*.ts"
+    "app/layout.js"
   ],
   "exclude": [
     "node_modules"
