@@ -1,37 +1,38 @@
 {
-	"compilerOptions": {
-		"lib": [
-			"dom",
-			"dom.iterable",
-			"esnext"
-		],
-		"checkJs": true,
-		"allowJs": true,
-		"skipLibCheck": true,
-		"strict": false,
-		"noEmit": true,
-		"incremental": true,
-		"esModuleInterop": true,
-		"module": "esnext",
-		"moduleResolution": "node",
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"jsx": "preserve",
-		"plugins": [
-			{
-				"name": "next",
-			}
-		]
-	},
-	"include": [
-		"next-env.d.ts",
-		".next/types/**/*.ts",
-		"**/*.ts",
-		"**/*.tsx",
-		"**/*.js",
-		"app/layout.js"
-	],
-	"exclude": [
-		"node_modules"
-	]
+  "compilerOptions": {
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "checkJs": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
+  },
+  "include": [
+    "next-env.d.ts",
+    ".next/types/**/*.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "app/layout.js",
+    "nome_da_pasta_personalizada/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
