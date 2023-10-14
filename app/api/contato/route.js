@@ -8,7 +8,10 @@ export async function POST(req) {
 	const { nome, telefone, email, assunto, mensagem } = await req.json()
 
 	const transporter = nodemailer.createTransport({
-		service: process.env.EMAIL_SERVICE,
+		// service: process.env.EMAIL_SERVICE,
+		host: process.env.EMAIL_HOST,
+		port: process.env.EMAIL_PORT,
+		secure: process.env.EMAIL_SECURE,
 		auth: {
 			user: emailUser,
 			pass: emailPass,
@@ -44,5 +47,4 @@ export async function POST(req) {
 			message: 'Erro ao enviar e-mail',
 		})
 	}
-	// console.log(telefone)
 }
