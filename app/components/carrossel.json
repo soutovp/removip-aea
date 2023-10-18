@@ -1,27 +1,42 @@
 [
-  {
-    "imageSrc": "/images/servico_resgate-aeromedico.jpg",
-    "altText": "Resgate aeromédico",
-    "title": "Resgate Aeromédico"
-  },
-  {
-    "imageSrc": "/images/servico_remocao-ambulancia-particular.jpg",
-    "altText": "Remoção de pacientes",
-    "title": "Remoção de pacientes"
-  },
-  {
-    "imageSrc": "/images/servico_ambulancia-cobertura-medica.jpg",
-    "altText": "Cobertura médica de eventos",
-    "title": "Cobertura médica de eventos"
-  },
-  {
-    "imageSrc": "/images/servico_posto-medico-evento.jpg",
-    "altText": "Postos médicos",
-    "title": "Postos médicos"
-  },
-  {
-    "imageSrc": "/images/servico_locacao-aluguel-ambulancia.jpg",
-    "altText": "Locação de ambulâncias",
-    "title": "Locação de ambulâncias"
-  }
+	{
+		"imageSrc": "/images/servico_resgate-aeromedico.jpg",
+		"altText": "Resgate aeromédico",
+		"title": "Resgate Aeromédico"
+	},
+	{
+		"imageSrc": "/images/servico_remocao-ambulancia-particular.jpg",
+		"altText": "Remoção de pacientes",
+		"title": "Remoção de pacientes"
+	},
+	{
+		"imageSrc": "/images/servico_ambulancia-cobertura-medica.jpg",
+		"altText": "Cobertura médica de eventos",
+		"title": "Cobertura médica de eventos"
+	},
+	{
+		"imageSrc": "/images/servico_posto-medico-evento.jpg",
+		"altText": "Postos médicos",
+		"title": "Postos médicos"
+	},
+	{
+		"imageSrc": "/images/servico_locacao-aluguel-ambulancia.jpg",
+		"altText": "Locação de ambulâncias",
+		"title": "Locação de ambulâncias"
+	},
+	{
+		"imageSrc": "/images/banner-ambulancia-1.jpeg",
+		"altText": "Locação de ambulâncias",
+		"title": "Locação de ambulâncias"
+	},
+	{
+		"imageSrc": "/images/banner-ambulancia-2.jpeg",
+		"altText": "Locação de ambulâncias",
+		"title": "Locação de ambulâncias"
+	},
+	{
+		"imageSrc": "/images/banner-ambulancia-3.jpeg",
+		"altText": "Locação de ambulâncias",
+		"title": "Locação de ambulâncias"
+	}
 ]

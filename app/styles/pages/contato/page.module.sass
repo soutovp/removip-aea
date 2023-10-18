@@ -76,11 +76,18 @@
 						align-items: center
 						> p
 							margin-left: 10px
+							@include media-small
+								font-size: .8rem
 					> p
 						text-align: start
+						overflow: hidden
+						word-break: break-all
+						padding: 5px 0
 			> div:last-child
 				display: flex
 				flex-direction: column
 				align-items: flex-end
+				button
+					margin-top: 9px
 				> p
 					text-align: end

@@ -162,7 +162,7 @@ export default function Formulario({ className = null }) {
 								Enviar!
 							</button>
 							<p>
-								Rua joao Tarquato, 248 Bonsucesso<br />Rio de Janeiro - RJ | CEP
+								Rua João Tarquato, 248 Bonsucesso<br />Rio de Janeiro - RJ | CEP
 								21032-150
 							</p>
 						</div>

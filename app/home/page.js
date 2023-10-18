@@ -39,7 +39,7 @@ export default function Home() {
 								height={75}
 								alt={'Icone de coração'}
 							/>
-							<h2>A Frota</h2>
+							<h2>Frota</h2>
 							<p>Nossa frota grante eficiência para qualquer tipo de emergência</p>
 						</div>
 					</li>
@@ -51,7 +51,7 @@ export default function Home() {
 								height={75}
 								alt={'Icone de coração'}
 							/>
-							<h2>Credeinciamento</h2>
+							<h2>Credenciamento</h2>
 							<p>Oferecemos toda a segurança de um profissionalismo credenciado</p>
 						</div>
 					</li>
@@ -63,7 +63,7 @@ export default function Home() {
 								height={75}
 								alt={'Icone de coração'}
 							/>
-							<h2>A Equipe</h2>
+							<h2>Equipe</h2>
 							<p>Infraestrutura sob comando de profissionais qualificados</p>
 						</div>
 					</li>
