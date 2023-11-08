@@ -7,6 +7,8 @@ export async function POST(req) {
 	const emailPass = process.env.EMAIL_PASS;
 	const { nome, telefone, email, assunto, mensagem } = await req.json()
 
+	// comentario
+
 	const transporter = nodemailer.createTransport({
 		// service: process.env.EMAIL_SERVICE,
 		host: process.env.EMAIL_HOST,
