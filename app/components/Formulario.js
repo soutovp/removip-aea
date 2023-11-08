@@ -154,7 +154,7 @@ export default function Formulario({ className = null }) {
 									/>
 									<p>@REMOVIP_</p>
 								</div>
-								<p>(21) 3148-4158<br />removip@removip.com.br</p>
+								<p>(21) 3040-2666<br />removip@removip.com.br</p>
 							</div>
 						</div>
 						<div>
