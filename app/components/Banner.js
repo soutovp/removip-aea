@@ -7,7 +7,7 @@ export default function Banner({ className = null, alt, img }) {
 					<div tabIndex={-1}></div>
 					<div>
 						<img
-							src={`/images/${img}.png`}
+							src={`/images/${img}.jpg`}
 							alt={alt}
 						/>
 					</div>

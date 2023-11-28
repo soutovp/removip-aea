@@ -17,7 +17,7 @@ export default function Page() {
 				<div>
 					{servicos.map(({ imagem, title, text }, index) => (
 						<article key={index}>
-							<img src={`/images/${imagem.img}.png`} alt={imagem.alt} />
+							<img src={`/images/${imagem.img}.jpg`} alt={imagem.alt} />
 							<h2>{title}</h2>
 							<div>
 								{text.map((paragrafo, index) => (
