@@ -1,9 +1,0 @@
-{
-  "/page": "/",
-  "/home/page": "/home",
-  "/contato/page": "/contato",
-  "/servicos/page": "/servicos",
-  "/sobre/page": "/sobre",
-  "/eventos/page": "/eventos",
-  "/api/contato/route": "/api/contato"
-}
