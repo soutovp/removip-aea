@@ -23,20 +23,5 @@
 		"imageSrc": "/images/servico_locacao-aluguel-ambulancia.jpg",
 		"altText": "Locação de ambulâncias",
 		"title": "Locação de ambulâncias"
-	},
-	{
-		"imageSrc": "/images/banner-ambulancia-1.jpeg",
-		"altText": "Locação de ambulâncias",
-		"title": "Locação de ambulâncias"
-	},
-	{
-		"imageSrc": "/images/banner-ambulancia-2.jpeg",
-		"altText": "Locação de ambulâncias",
-		"title": "Locação de ambulâncias"
-	},
-	{
-		"imageSrc": "/images/banner-ambulancia-3.jpeg",
-		"altText": "Locação de ambulâncias",
-		"title": "Locação de ambulâncias"
 	}
 ]
