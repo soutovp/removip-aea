@@ -1,0 +1,9 @@
+{
+  "/page": "/",
+  "/eventos/page": "/eventos",
+  "/contato/page": "/contato",
+  "/servicos/page": "/servicos",
+  "/sobre/page": "/sobre",
+  "/home/page": "/home",
+  "/api/contato/route": "/api/contato"
+}
